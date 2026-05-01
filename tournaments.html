@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MafiaRatings - Tournaments</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">MafiaRatings</a>
+            <div class="header-actions">
+                <button class="lang-btn is-active" data-lang="ru">RU</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+                <a class="profile-link login-link" href="#"><span class="login-icon">🔑</span><span data-i18n="btn.profile">Profile</span></a>
+            </div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">☰</button>
+        </div>
+    </header>
+
+    <nav class="main-nav-overlay" id="mainNav" aria-hidden="true">
+        <div class="main-nav-panel">
+            <button class="menu-close" id="menuClose" aria-label="Close menu">✕</button>
+            <a href="index.html" class="menu-link root-link" data-i18n="nav.home">Home</a>
+            <a href="#" class="menu-link root-link" data-i18n="nav.ratings">Рейтинги</a>
+            <a href="#" class="menu-link root-link" data-i18n="nav.clubs">Клубы</a>
+            <a href="#" class="menu-link root-link" data-i18n="nav.leagues">Лиги</a>
+            <a href="#" class="menu-link root-link" data-i18n="nav.gameDays">Игровые дни</a>
+            <a href="tournaments.html" class="menu-link root-link" data-i18n="nav.tournaments">Турниры</a>
+            <a href="#" class="menu-link root-link" data-i18n="nav.series">Серии</a>
+            <a href="#" class="menu-link root-link" data-i18n="nav.games">Игры</a>
+            <a href="#" class="menu-link root-link" data-i18n="nav.seating">Рассадки</a>
+
+            <button class="menu-link has-children" data-submenu-toggle="reports" aria-expanded="false">
+                <span data-i18n="nav.reports">Reports</span>
+                <span class="submenu-arrow">▾</span>
+            </button>
+            <div class="submenu" data-submenu="reports">
+                <a href="#" data-i18n="nav.reports.compChart">Competition chart</a>
+                <a href="#" data-i18n="nav.reports.referees">Referees</a>
+                <a href="#" data-i18n="nav.reports.nomWinners">Nomination winners</a>
+                <a href="#" data-i18n="nav.reports.byNumbers">By numbers</a>
+                <a href="#" data-i18n="nav.reports.generalStats">General stats</a>
+            </div>
+
+            <button class="menu-link has-children" data-submenu-toggle="resources" aria-expanded="false">
+                <span data-i18n="nav.resources">Resources</span>
+                <span class="submenu-arrow">▾</span>
+            </button>
+            <div class="submenu" data-submenu="resources">
+                <a href="#" data-i18n="nav.resources.videos">Videos</a>
+                <a href="#" data-i18n="nav.resources.photos">Photos</a>
+                <a href="#" data-i18n="nav.resources.rulebook">Rulebook</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page-main">
+        <div class="container">
+            <section class="section tournaments-page-section">
+                <div class="section-head">
+                    <h2 data-i18n="tournaments.title">Турниры</h2>
+                    <div class="event-filters">
+                        <button class="chip" data-i18n="tournaments.dates">Даты: -</button>
+                        <button class="chip" data-i18n="tournaments.past">Прошедшие</button>
+                        <button class="chip is-active" data-i18n="tournaments.future">Будущие</button>
+                    </div>
+                </div>
+
+                <div class="players-table-wrap">
+                    <table class="players-table tournaments-table">
+                        <thead>
+                            <tr>
+                                <th class="col-month" data-i18n="tournaments.colMonth">Месяц</th>
+                                <th class="col-tournament" data-i18n="tournaments.colTournament">Турнир</th>
+                                <th class="col-count" data-i18n="tournaments.colCount">Кол-во</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="3" class="month-cell col-month">May 2026</td>
+                                <td class="col-tournament">
+                                    <div class="tournament-main"><span class="mock-icon tournament-icon">🏆</span> <a href="tournament.html">April 2026 (играется сейчас)</a></div>
+                                    <div class="tournament-date">📅 03 May 2026</div>
+                                    <div class="tournament-club"><span class="mock-icon club-icon">🏛️</span> Maf is..., Citrus Heights, CA</div>
+                                </td>
+                                <td class="col-count">10</td>
+                            </tr>
+                            <tr>
+                                <td class="col-tournament">
+                                    <div class="tournament-main"><span class="mock-icon tournament-icon">🏆</span> <a href="tournament.html">Freedom Cup</a></div>
+                                    <div class="tournament-date">📅 17 May 2026</div>
+                                    <div class="tournament-club"><span class="mock-icon club-icon">🏛️</span> Maf is..., Citrus Heights, CA</div>
+                                </td>
+                                <td class="col-count">20</td>
+                            </tr>
+                            <tr>
+                                <td class="col-tournament">
+                                    <div class="tournament-main"><span class="mock-icon tournament-icon">🏆</span> <a href="tournament.html">MAF Marathon 2026</a></div>
+                                    <div class="tournament-date">📅 29 May 2026</div>
+                                    <div class="tournament-club"><span class="mock-icon club-icon">🏛️</span> LA MafClub, Los Angeles, CA</div>
+                                </td>
+                                <td class="col-count">20</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2" class="month-cell col-month">June 2026</td>
+                                <td class="col-tournament">
+                                    <div class="tournament-main"><span class="mock-icon tournament-icon">🏆</span> Весенний сезон 2026 (играется сейчас)</div>
+                                    <div class="tournament-date">📅 07 Jun 2026</div>
+                                    <div class="tournament-club"><span class="mock-icon club-icon">🏛️</span> Vojvodina Mafia Club, Novi-Sad</div>
+                                </td>
+                                <td class="col-count">10</td>
+                            </tr>
+                            <tr>
+                                <td class="col-tournament">
+                                    <div class="tournament-main"><span class="mock-icon tournament-icon">🏆</span> Миникапы VMC весна 2026 (играется сейчас)</div>
+                                    <div class="tournament-date">📅 21 Jun 2026</div>
+                                    <div class="tournament-club"><span class="mock-icon club-icon">🏛️</span> Vojvodina Mafia Club, Novi Sad</div>
+                                </td>
+                                <td class="col-count">10</td>
+                            </tr>
+                            <tr>
+                                <td class="month-cell col-month">August 2026</td>
+                                <td class="col-tournament">
+                                    <div class="tournament-main"><span class="mock-icon tournament-icon">🏆</span> Cascadia Cup 2026</div>
+                                    <div class="tournament-date">📅 15 Aug 2026</div>
+                                    <div class="tournament-club"><span class="mock-icon club-icon">🏛️</span> Vancouver Club, Vancouver, BC</div>
+                                </td>
+                                <td class="col-count">24</td>
+                            </tr>
+                            <tr>
+                                <td class="month-cell col-month">September 2026</td>
+                                <td class="col-tournament">
+                                    <div class="tournament-main"><span class="mock-icon tournament-icon">🏆</span> Birthday Cup</div>
+                                    <div class="tournament-date">📅 12 Sep 2026</div>
+                                    <div class="tournament-club"><span class="mock-icon club-icon">🏛️</span> Maf is..., Citrus Heights, CA</div>
+                                </td>
+                                <td class="col-count">20</td>
+                            </tr>
+                            <tr>
+                                <td class="month-cell col-month">October 2026</td>
+                                <td class="col-tournament">
+                                    <div class="tournament-main"><span class="mock-icon tournament-icon">🏆</span> Весна-лето 2026 (играется сейчас)</div>
+                                    <div class="tournament-date">📅 10 Oct 2026</div>
+                                    <div class="tournament-club"><span class="mock-icon club-icon">🏛️</span> Douro Dons, Porto</div>
+                                </td>
+                                <td class="col-count">10</td>
+                            </tr>
+                            <tr>
+                                <td class="month-cell col-month">November 2026</td>
+                                <td class="col-tournament">
+                                    <div class="tournament-main"><span class="mock-icon tournament-icon">🏆</span> Rating games (играется сейчас)</div>
+                                    <div class="tournament-date">📅 14 Nov 2026</div>
+                                    <div class="tournament-club"><span class="mock-icon club-icon">🏛️</span> Toronto Club, Toronto, ON</div>
+                                </td>
+                                <td class="col-count">20</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2" class="month-cell col-month">December 2026</td>
+                                <td class="col-tournament">
+                                    <div class="tournament-main"><span class="mock-icon tournament-icon">🏆</span> Orange Tournament 2026 (играется сейчас)</div>
+                                    <div class="tournament-date">📅 05 Dec 2026</div>
+                                    <div class="tournament-club"><span class="mock-icon club-icon">🏛️</span> Irvine Club, Irvine, CA</div>
+                                </td>
+                                <td class="col-count">20</td>
+                            </tr>
+                            <tr>
+                                <td class="col-tournament">
+                                    <div class="tournament-main"><span class="mock-icon tournament-icon">🏆</span> LA Familia season 2026 (играется сейчас)</div>
+                                    <div class="tournament-date">📅 19 Dec 2026</div>
+                                    <div class="tournament-club"><span class="mock-icon club-icon">🏛️</span> LA Familia, Los Angeles, CA</div>
+                                </td>
+                                <td class="col-count">10</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="4" class="month-cell col-month">January 2027</td>
+                                <td class="col-tournament">
+                                    <div class="tournament-main"><span class="mock-icon tournament-icon">🏆</span> MafClub LA 2026 (играется сейчас)</div>
+                                    <div class="tournament-date">📅 09 Jan 2027</div>
+                                    <div class="tournament-club"><span class="mock-icon club-icon">🏛️</span> MafClub LA, Los Angeles, CA</div>
+                                </td>
+                                <td class="col-count">13</td>
+                            </tr>
+                            <tr>
+                                <td class="col-tournament">
+                                    <div class="tournament-main"><span class="mock-icon tournament-icon">🏆</span> NOIR season 2026 (играется сейчас)</div>
+                                    <div class="tournament-date">📅 16 Jan 2027</div>
+                                    <div class="tournament-club"><span class="mock-icon club-icon">🏛️</span> NOIR, San Diego, CA</div>
+                                </td>
+                                <td class="col-count">100</td>
+                            </tr>
+                            <tr>
+                                <td class="col-tournament">
+                                    <div class="tournament-main"><span class="mock-icon tournament-icon">🏆</span> DFWM CUP 2026 (играется сейчас)</div>
+                                    <div class="tournament-date">📅 23 Jan 2027</div>
+                                    <div class="tournament-club"><span class="mock-icon club-icon">🏛️</span> DFWM, Irving, TX</div>
+                                </td>
+                                <td class="col-count">90</td>
+                            </tr>
+                            <tr>
+                                <td class="col-tournament">
+                                    <div class="tournament-main"><span class="mock-icon tournament-icon">🏆</span> Winter Kickoff</div>
+                                    <div class="tournament-date">📅 30 Jan 2027</div>
+                                    <div class="tournament-club"><span class="mock-icon club-icon">🏛️</span> TX Arena, Dallas, TX</div>
+                                </td>
+                                <td class="col-count">50</td>
+                            </tr>
+                            <tr>
+                                <td class="month-cell col-month">February 2027</td>
+                                <td class="col-tournament">
+                                    <div class="tournament-main"><span class="mock-icon tournament-icon">🏆</span> Winter Finals</div>
+                                    <div class="tournament-date">📅 13 Feb 2027</div>
+                                    <div class="tournament-club"><span class="mock-icon club-icon">🏛️</span> TX Arena, Dallas, TX</div>
+                                </td>
+                                <td class="col-count">100</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>© MafiaRatings</p>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="#">Reports</a>
+                <a href="#">Resources</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

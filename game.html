@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игра — MafiaRatings</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">MafiaRatings</a>
+            <div class="header-actions">
+                <button class="lang-btn is-active" data-lang="ru">RU</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+                <a class="profile-link login-link" href="#"><span class="login-icon">🔑</span><span data-i18n="btn.profile">Profile</span></a>
+            </div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">☰</button>
+        </div>
+    </header>
+
+    <nav class="main-nav-overlay" id="mainNav" aria-hidden="true">
+        <div class="main-nav-panel">
+            <button class="menu-close" id="menuClose" aria-label="Close menu">✕</button>
+            <a href="index.html" class="menu-link root-link" data-i18n="nav.home">Home</a>
+            <a href="#" class="menu-link root-link" data-i18n="nav.ratings">Рейтинги</a>
+            <a href="#" class="menu-link root-link" data-i18n="nav.clubs">Клубы</a>
+            <a href="#" class="menu-link root-link" data-i18n="nav.leagues">Лиги</a>
+            <a href="#" class="menu-link root-link" data-i18n="nav.gameDays">Игровые дни</a>
+            <a href="tournaments.html" class="menu-link root-link" data-i18n="nav.tournaments">Турниры</a>
+            <a href="#" class="menu-link root-link" data-i18n="nav.series">Серии</a>
+            <a href="#" class="menu-link root-link" data-i18n="nav.games">Игры</a>
+            <a href="#" class="menu-link root-link" data-i18n="nav.seating">Рассадки</a>
+
+            <button class="menu-link has-children" data-submenu-toggle="reports" aria-expanded="false">
+                <span data-i18n="nav.reports">Reports</span>
+                <span class="submenu-arrow">▾</span>
+            </button>
+            <div class="submenu" data-submenu="reports">
+                <a href="#" data-i18n="nav.reports.compChart">Competition chart</a>
+                <a href="#" data-i18n="nav.reports.referees">Referees</a>
+                <a href="#" data-i18n="nav.reports.nomWinners">Nomination winners</a>
+                <a href="#" data-i18n="nav.reports.byNumbers">By numbers</a>
+                <a href="#" data-i18n="nav.reports.generalStats">General stats</a>
+            </div>
+
+            <button class="menu-link has-children" data-submenu-toggle="resources" aria-expanded="false">
+                <span data-i18n="nav.resources">Resources</span>
+                <span class="submenu-arrow">▾</span>
+            </button>
+            <div class="submenu" data-submenu="resources">
+                <a href="#" data-i18n="nav.resources.videos">Videos</a>
+                <a href="#" data-i18n="nav.resources.photos">Photos</a>
+                <a href="#" data-i18n="nav.resources.rulebook">Rulebook</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page-main">
+        <div class="container">
+            <p class="game-breadcrumb section-meta">
+                <a href="tournament.html" class="text-link">Star Wars 2026</a>
+                · <span data-i18n="game.breadcrumb">Игра</span> #<span id="gameIdDisplay">27488</span>
+            </p>
+
+            <section class="tournament-card game-hero-card">
+                <div class="tournament-title-line game-title-line">
+                    <span class="mock-icon" aria-hidden="true">🎭</span>
+                    <h1 class="game-page-title" id="gamePageTitle">Star Wars 2026: основной раунд. Стол 1, игра 7. Победа мафии.</h1>
+                </div>
+
+                <div class="game-meta-table-wrap">
+                    <table class="game-meta-table">
+                        <thead>
+                            <tr>
+                                <th data-i18n="game.meta.club">Клуб</th>
+                                <th data-i18n="game.meta.tournament">Турнир</th>
+                                <th data-i18n="game.meta.referee">Судья</th>
+                                <th data-i18n="game.meta.time">Время</th>
+                                <th data-i18n="game.meta.duration">Длительность</th>
+                                <th data-i18n="game.meta.language">Язык</th>
+                                <th data-i18n="game.meta.civOdds">Шанс мирных</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Maf is…</td>
+                                <td><a class="player-link" href="tournament.html">Star Wars 2026</a></td>
+                                <td>—</td>
+                                <td>25 апр. 2026, 6:01</td>
+                                <td>00:35</td>
+                                <td>РУС</td>
+                                <td>32.5%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="section game-section game-players-section">
+                <div class="players-table-wrap game-players-wrap">
+                    <table class="players-table game-players-table">
+                        <thead>
+                            <tr>
+                                <th class="col-seat">№</th>
+                                <th data-i18n="players.player">Игрок</th>
+                                <th data-i18n="game.col.role">Роль</th>
+                                <th data-i18n="game.col.dops">Допы</th>
+                                <th class="game-comment-col" data-i18n="game.col.dopComment">Комментарий к допам</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td><span class="mock-icon player-icon">👤</span><a class="player-link" href="player.html">Cherry Pie</a></td>
+                                <td class="role-cell"></td>
+                                <td class="game-dops-cell"><span class="dop-val dop-val--plus">+4.2</span></td>
+                                <td class="game-comment-cell">Собран в 8 при 9, снят. Речи ровные, вклад в победу города умеренный.</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><span class="mock-icon player-icon">👤</span><a class="player-link" href="player.html">daVinci</a></td>
+                                <td class="role-cell"></td>
+                                <td class="game-dops-cell"></td>
+                                <td class="game-comment-cell">Убит ночью 1. Мало успел показать линию.</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td><span class="mock-icon player-icon">👤</span><a class="player-link" href="player.html">Gambit</a></td>
+                                <td class="role-cell"><span class="role-icon role-icon--mafia" title="Мафия" aria-label="Мафия">👎</span></td>
+                                <td class="game-dops-cell"><span class="dop-val dop-val--plus">+5.1</span></td>
+                                <td class="game-comment-cell">Играл в 4 всю игру — последовательная линия, хороший контроль стола.</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td><span class="mock-icon player-icon">👤</span><a class="player-link" href="player.html">Holdem</a></td>
+                                <td class="role-cell"><span class="role-icon role-icon--sheriff" title="Шериф" aria-label="Шериф">✡</span></td>
+                                <td class="game-dops-cell"><span class="dop-val dop-val--plus">+5.8</span></td>
+                                <td class="game-comment-cell">Динамика в шерифа, устоял против двух завещаний — сильная игра на проверке.</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td><span class="mock-icon player-icon">👤</span><a class="player-link" href="player.html">Sladkiy</a></td>
+                                <td class="role-cell"><span class="role-icon role-icon--don" title="Дон" aria-label="Дон">💎</span></td>
+                                <td class="game-dops-cell"><span class="dop-val dop-val--plus">+5.5</span></td>
+                                <td class="game-comment-cell">Самый «мирный» из чёрных; работа с критикой на 2 и снятие — плюс к управлению.</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td><span class="mock-icon player-icon">👤</span><a class="player-link" href="player.html">Гений</a></td>
+                                <td class="role-cell"><span class="role-icon role-icon--mafia" title="Мафия" aria-label="Мафия">👎</span></td>
+                                <td class="game-dops-cell"><span class="dop-val dop-val--plus">+4.4</span></td>
+                                <td class="game-comment-cell">При 9 объявила ключевые номера, затем линия в 4 и сбор в 5 при 5 в городе.</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td><span class="mock-icon player-icon">👤</span><a class="player-link" href="player.html">Любовник</a></td>
+                                <td class="role-cell"></td>
+                                <td class="game-dops-cell"></td>
+                                <td class="game-comment-cell">Убит стрелком ночью 1.</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td><span class="mock-icon player-icon">👤</span><a class="player-link" href="player.html">Фурия</a></td>
+                                <td class="role-cell"></td>
+                                <td class="game-dops-cell"><span class="dop-val dop-val--plus">+3.8</span></td>
+                                <td class="game-comment-cell">Сбор в 1 при 9 и снятие — активное дневное действие.</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td><span class="mock-icon player-icon">👤</span><a class="player-link" href="player.html">Vale</a></td>
+                                <td class="role-cell"></td>
+                                <td class="game-dops-cell"><span class="dop-val dop-val--plus">+5.3</span></td>
+                                <td class="game-comment-cell">Инициатива по снятиям 1 и 8 на два круга; сильное завещание и разбор пары мирных.</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td><span class="mock-icon player-icon">👤</span><a class="player-link" href="player.html">Toxic</a></td>
+                                <td class="role-cell"></td>
+                                <td class="game-dops-cell"><span class="dop-val dop-val--minus">−0.2</span></td>
+                                <td class="game-comment-cell">Голосование при 9 оформлено слабо; в завещании указан акцент на 9 и снятие 4.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="section game-section game-dop-description-section">
+                <div class="section-head">
+                    <h2 data-i18n="game.dopDescriptionTitle">Описание доп баллов</h2>
+                </div>
+                <div class="game-log prose-block">
+                    <ul class="game-ref-notes">
+                        <li><strong>3</strong> — играл в 4 всю игру.</li>
+                        <li><strong>4</strong> — динамика в шерифа, усидел против двух завещаний.</li>
+                        <li><strong>5</strong> — был самым мирным из чёрных, обращался к 2 на критике и убеждал его снять.</li>
+                        <li><strong>6</strong> — при девяти объявляла 4 и 8, далее играла в 4, при пяти собирала в 5.</li>
+                        <li><strong>8</strong> — собирал в 1 при девяти и снял её.</li>
+                        <li><strong>9</strong> — при девяти предложил снять 1 и 8 два круга, снял 1 и 8 два круга, ушёл с завещанием 2 и 6 мирные, снять 5, в 3 и 4 мирнее 3.</li>
+                        <li><strong>10</strong> — не объявила нормально голосование при девяти, завещание 9 рулит, снять 4.</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>© MafiaRatings</p>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="#">Reports</a>
+                <a href="#">Resources</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        (function () {
+            var id = new URLSearchParams(location.search).get("id");
+            if (!id) id = "27488";
+            var el = document.getElementById("gameIdDisplay");
+            if (el) el.textContent = id;
+            document.title = "Игра #" + id + " — MafiaRatings";
+        })();
+    </script>
+</body>
+</html>

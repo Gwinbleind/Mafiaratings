@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MafiaRatings - Player</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">MafiaRatings</a>
+            <div class="header-actions">
+                <button class="lang-btn is-active" data-lang="ru">RU</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+                <a class="profile-link login-link" href="#"><span class="login-icon">🔑</span><span data-i18n="btn.profile">Profile</span></a>
+            </div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">☰</button>
+        </div>
+    </header>
+
+    <nav class="main-nav-overlay" id="mainNav" aria-hidden="true">
+        <div class="main-nav-panel">
+            <button class="menu-close" id="menuClose" aria-label="Close menu">✕</button>
+            <a href="index.html" class="menu-link root-link" data-i18n="nav.home">Home</a>
+            <a href="#" class="menu-link root-link" data-i18n="nav.ratings">Рейтинги</a>
+            <a href="#" class="menu-link root-link" data-i18n="nav.clubs">Клубы</a>
+            <a href="#" class="menu-link root-link" data-i18n="nav.leagues">Лиги</a>
+            <a href="#" class="menu-link root-link" data-i18n="nav.gameDays">Игровые дни</a>
+            <a href="tournaments.html" class="menu-link root-link" data-i18n="nav.tournaments">Турниры</a>
+            <a href="#" class="menu-link root-link" data-i18n="nav.series">Серии</a>
+            <a href="#" class="menu-link root-link" data-i18n="nav.games">Игры</a>
+            <a href="#" class="menu-link root-link" data-i18n="nav.seating">Рассадки</a>
+
+            <button class="menu-link has-children" data-submenu-toggle="reports" aria-expanded="false">
+                <span data-i18n="nav.reports">Reports</span>
+                <span class="submenu-arrow">▾</span>
+            </button>
+            <div class="submenu" data-submenu="reports">
+                <a href="#" data-i18n="nav.reports.compChart">Competition chart</a>
+                <a href="#" data-i18n="nav.reports.referees">Referees</a>
+                <a href="#" data-i18n="nav.reports.nomWinners">Nomination winners</a>
+                <a href="#" data-i18n="nav.reports.byNumbers">By numbers</a>
+                <a href="#" data-i18n="nav.reports.generalStats">General stats</a>
+            </div>
+
+            <button class="menu-link has-children" data-submenu-toggle="resources" aria-expanded="false">
+                <span data-i18n="nav.resources">Resources</span>
+                <span class="submenu-arrow">▾</span>
+            </button>
+            <div class="submenu" data-submenu="resources">
+                <a href="#" data-i18n="nav.resources.videos">Videos</a>
+                <a href="#" data-i18n="nav.resources.photos">Photos</a>
+                <a href="#" data-i18n="nav.resources.rulebook">Rulebook</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page-main">
+        <div class="container">
+            <section class="section">
+                <div class="tournament-card">
+                    <div class="tournament-title-line">
+                        <span class="mock-icon player-icon">👤</span>
+                        <h2>Eluha</h2>
+                    </div>
+                    <p class="section-meta">Sunnyvale, CA, USA</p>
+                    <p class="section-meta">Winner profile • Registered since March 12, 2017</p>
+                </div>
+
+                <div class="players-table-wrap player-rating-chart-wrap desktop-only">
+                    <div class="section-head">
+                        <h3 data-i18n="player.ratingChart">Динамика рейтинга</h3>
+                    </div>
+                    <canvas id="playerRatingChart" width="1200" height="280" aria-label="Player rating chart"></canvas>
+                </div>
+
+                <div class="player-achievements">
+                    <div class="section-head section-head--achievements">
+                        <h3 data-i18n="player.achievements">Достижения</h3>
+                    </div>
+                    <div class="achievements-grid">
+                        <a class="achievement-card achievement-card--gold" href="tournament.html">
+                            <div class="achievement-card__body">
+                                <div class="achievement-rank">
+                                    <span class="achievement-medal achievement-medal--gold" aria-hidden="true"></span>
+                                    <strong class="achievement-rank-text" data-i18n="player.place.winner">Победитель</strong>
+                                </div>
+                                <div class="achievement-banner" style="--banner-h: 200">VWC</div>
+                                <div class="achievement-stars" aria-label="4">★★★★</div>
+                                <div class="achievement-date" data-i18n="player.achv.date.1">Июнь 2024</div>
+                            </div>
+                            <div class="achievement-card__footer">
+                                <span class="achievement-tournament-name">VaWaCa</span>
+                                <span class="achievement-club" aria-hidden="true"><span class="mock-icon club-icon">🏛️</span></span>
+                            </div>
+                        </a>
+                        <a class="achievement-card achievement-card--gold" href="tournament.html">
+                            <div class="achievement-card__body">
+                                <div class="achievement-rank">
+                                    <span class="achievement-medal achievement-medal--gold" aria-hidden="true"></span>
+                                    <strong class="achievement-rank-text" data-i18n="player.place.winner">Победитель</strong>
+                                </div>
+                                <div class="achievement-banner" style="--banner-h: 265">AML</div>
+                                <div class="achievement-stars">★★★★★</div>
+                                <div class="achievement-date" data-i18n="player.achv.date.2">Январь 2022</div>
+                            </div>
+                            <div class="achievement-card__footer">
+                                <span class="achievement-tournament-name">AML Masters 2021</span>
+                                <span class="achievement-club" aria-hidden="true"><span class="mock-icon club-icon">🎭</span></span>
+                            </div>
+                        </a>
+                        <a class="achievement-card achievement-card--gold" href="tournament.html">
+                            <div class="achievement-card__body">
+                                <div class="achievement-rank">
+                                    <span class="achievement-medal achievement-medal--gold" aria-hidden="true"></span>
+                                    <strong class="achievement-rank-text" data-i18n="player.place.winner">Победитель</strong>
+                                </div>
+                                <div class="achievement-banner" style="--banner-h: 32">VWC</div>
+                                <div class="achievement-stars">★★★</div>
+                                <div class="achievement-date" data-i18n="player.achv.date.3">Май 2018</div>
+                            </div>
+                            <div class="achievement-card__footer">
+                                <span class="achievement-tournament-name">VaWaCa-2018</span>
+                                <span class="achievement-club" aria-hidden="true"><span class="mock-icon club-icon">🏛️</span></span>
+                            </div>
+                        </a>
+                        <a class="achievement-card achievement-card--gold" href="tournament.html">
+                            <div class="achievement-card__body">
+                                <div class="achievement-rank">
+                                    <span class="achievement-medal achievement-medal--gold" aria-hidden="true"></span>
+                                    <strong class="achievement-rank-text" data-i18n="player.place.winner">Победитель</strong>
+                                </div>
+                                <div class="achievement-banner" style="--banner-h: 145">WCE</div>
+                                <div class="achievement-stars">★★★</div>
+                                <div class="achievement-date" data-i18n="player.achv.date.4">Август 2022</div>
+                            </div>
+                            <div class="achievement-card__footer">
+                                <span class="achievement-tournament-name">West Coast Express 2022</span>
+                                <span class="achievement-club" aria-hidden="true"><span class="mock-icon club-icon">🌴</span></span>
+                            </div>
+                        </a>
+                        <a class="achievement-card achievement-card--gold" href="tournament.html">
+                            <div class="achievement-card__body">
+                                <div class="achievement-rank">
+                                    <span class="achievement-medal achievement-medal--gold" aria-hidden="true"></span>
+                                    <strong class="achievement-rank-text" data-i18n="player.place.winner">Победитель</strong>
+                                </div>
+                                <div class="achievement-banner" style="--banner-h: 330">B10</div>
+                                <div class="achievement-stars">★★★</div>
+                                <div class="achievement-date" data-i18n="player.achv.date.5">Сентябрь 2022</div>
+                            </div>
+                            <div class="achievement-card__footer">
+                                <span class="achievement-tournament-name">The Big 10 Cup</span>
+                                <span class="achievement-club" aria-hidden="true"><span class="mock-icon club-icon">🏆</span></span>
+                            </div>
+                        </a>
+                        <a class="achievement-card achievement-card--gold" href="tournament.html">
+                            <div class="achievement-card__body">
+                                <div class="achievement-rank">
+                                    <span class="achievement-medal achievement-medal--gold" aria-hidden="true"></span>
+                                    <strong class="achievement-rank-text" data-i18n="player.place.winner">Победитель</strong>
+                                </div>
+                                <div class="achievement-banner" style="--banner-h: 355">GB</div>
+                                <div class="achievement-stars">★★★</div>
+                                <div class="achievement-date" data-i18n="player.achv.date.6">Март 2026</div>
+                            </div>
+                            <div class="achievement-card__footer">
+                                <span class="achievement-tournament-name">Golden Blood 2026</span>
+                                <span class="achievement-club" aria-hidden="true"><span class="mock-icon club-icon">🩸</span></span>
+                            </div>
+                        </a>
+                        <a class="achievement-card achievement-card--bronze" href="tournament.html">
+                            <div class="achievement-card__body">
+                                <div class="achievement-rank">
+                                    <span class="achievement-medal achievement-medal--bronze" aria-hidden="true"></span>
+                                    <strong class="achievement-rank-text" data-i18n="player.place.third">3 место</strong>
+                                </div>
+                                <div class="achievement-banner" style="--banner-h: 215">GGC</div>
+                                <div class="achievement-stars">★★★★</div>
+                                <div class="achievement-date" data-i18n="player.achv.date.7">Октябрь 2024</div>
+                            </div>
+                            <div class="achievement-card__footer">
+                                <span class="achievement-tournament-name">Golden Gate Cup</span>
+                                <span class="achievement-club" aria-hidden="true"><span class="mock-icon club-icon">🌉</span></span>
+                            </div>
+                        </a>
+                        <a class="achievement-card achievement-card--bronze" href="tournament.html">
+                            <div class="achievement-card__body">
+                                <div class="achievement-rank">
+                                    <span class="achievement-medal achievement-medal--bronze" aria-hidden="true"></span>
+                                    <strong class="achievement-rank-text" data-i18n="player.place.third">3 место</strong>
+                                </div>
+                                <div class="achievement-banner" style="--banner-h: 220">GGC</div>
+                                <div class="achievement-stars">★★★★</div>
+                                <div class="achievement-date" data-i18n="player.achv.date.8">Апрель 2023</div>
+                            </div>
+                            <div class="achievement-card__footer">
+                                <span class="achievement-tournament-name">Golden Gate Cup 2023</span>
+                                <span class="achievement-club" aria-hidden="true"><span class="mock-icon club-icon">🌉</span></span>
+                            </div>
+                        </a>
+                        <a class="achievement-card achievement-card--silver" href="tournament.html">
+                            <div class="achievement-card__body">
+                                <div class="achievement-rank">
+                                    <span class="achievement-medal achievement-medal--silver" aria-hidden="true"></span>
+                                    <strong class="achievement-rank-text" data-i18n="player.place.second">2 место</strong>
+                                </div>
+                                <div class="achievement-banner" style="--banner-h: 218">GGC</div>
+                                <div class="achievement-stars">★★★</div>
+                                <div class="achievement-date" data-i18n="player.achv.date.9">Июнь 2021</div>
+                            </div>
+                            <div class="achievement-card__footer">
+                                <span class="achievement-tournament-name">Golden Gate Cup 2021</span>
+                                <span class="achievement-club" aria-hidden="true"><span class="mock-icon club-icon">🌉</span></span>
+                            </div>
+                        </a>
+                        <a class="achievement-card achievement-card--bronze" href="tournament.html">
+                            <div class="achievement-card__body">
+                                <div class="achievement-rank">
+                                    <span class="achievement-medal achievement-medal--bronze" aria-hidden="true"></span>
+                                    <strong class="achievement-rank-text" data-i18n="player.place.third">3 место</strong>
+                                </div>
+                                <div class="achievement-banner" style="--banner-h: 38">VWC</div>
+                                <div class="achievement-stars">★★★</div>
+                                <div class="achievement-date" data-i18n="player.achv.date.10">Май 2019</div>
+                            </div>
+                            <div class="achievement-card__footer">
+                                <span class="achievement-tournament-name">VaWaCa-2019</span>
+                                <span class="achievement-club" aria-hidden="true"><span class="mock-icon club-icon">🏛️</span></span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>© MafiaRatings</p>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="#">Reports</a>
+                <a href="#">Resources</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

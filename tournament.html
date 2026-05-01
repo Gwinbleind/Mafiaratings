@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MafiaRatings - Tournament</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">MafiaRatings</a>
+            <div class="header-actions">
+                <button class="lang-btn is-active" data-lang="ru">RU</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+                <a class="profile-link login-link" href="#"><span class="login-icon">🔑</span><span data-i18n="btn.profile">Profile</span></a>
+            </div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">☰</button>
+        </div>
+    </header>
+
+    <nav class="main-nav-overlay" id="mainNav" aria-hidden="true">
+        <div class="main-nav-panel">
+            <button class="menu-close" id="menuClose" aria-label="Close menu">✕</button>
+            <a href="index.html" class="menu-link root-link" data-i18n="nav.home">Home</a>
+            <a href="#" class="menu-link root-link" data-i18n="nav.ratings">Рейтинги</a>
+            <a href="#" class="menu-link root-link" data-i18n="nav.clubs">Клубы</a>
+            <a href="#" class="menu-link root-link" data-i18n="nav.leagues">Лиги</a>
+            <a href="#" class="menu-link root-link" data-i18n="nav.gameDays">Игровые дни</a>
+            <a href="tournaments.html" class="menu-link root-link" data-i18n="nav.tournaments">Турниры</a>
+            <a href="#" class="menu-link root-link" data-i18n="nav.series">Серии</a>
+            <a href="#" class="menu-link root-link" data-i18n="nav.games">Игры</a>
+            <a href="#" class="menu-link root-link" data-i18n="nav.seating">Рассадки</a>
+
+            <button class="menu-link has-children" data-submenu-toggle="reports" aria-expanded="false">
+                <span data-i18n="nav.reports">Reports</span>
+                <span class="submenu-arrow">▾</span>
+            </button>
+            <div class="submenu" data-submenu="reports">
+                <a href="#" data-i18n="nav.reports.compChart">Competition chart</a>
+                <a href="#" data-i18n="nav.reports.referees">Referees</a>
+                <a href="#" data-i18n="nav.reports.nomWinners">Nomination winners</a>
+                <a href="#" data-i18n="nav.reports.byNumbers">By numbers</a>
+                <a href="#" data-i18n="nav.reports.generalStats">General stats</a>
+            </div>
+
+            <button class="menu-link has-children" data-submenu-toggle="resources" aria-expanded="false">
+                <span data-i18n="nav.resources">Resources</span>
+                <span class="submenu-arrow">▾</span>
+            </button>
+            <div class="submenu" data-submenu="resources">
+                <a href="#" data-i18n="nav.resources.videos">Videos</a>
+                <a href="#" data-i18n="nav.resources.photos">Photos</a>
+                <a href="#" data-i18n="nav.resources.rulebook">Rulebook</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page-main">
+        <div class="container">
+            <section class="section">
+                <div class="tournament-tab-carousel" role="tablist" aria-label="Tournament sections">
+                    <button class="tour-tab is-active" data-tour-tab="info" role="tab" aria-selected="true" data-i18n="tour.tabs.info">Турнир</button>
+                    <button class="tour-tab" data-tour-tab="standings" role="tab" aria-selected="false" data-i18n="tour.tabs.standings">Таблица</button>
+                    <button class="tour-tab" data-tour-tab="seating" role="tab" aria-selected="false" data-i18n="tour.tabs.seating">Рассадка</button>
+                    <button class="tour-tab" data-tour-tab="games" role="tab" aria-selected="false" data-i18n="tour.tabs.games">Игры</button>
+                </div>
+
+                <section class="tour-panel is-active" data-tour-panel="info">
+                    <div class="tournament-card">
+                        <div class="tournament-title-line">
+                            <span class="mock-icon tournament-icon">🏆</span>
+                            <h2>Star Wars 2026</h2>
+                        </div>
+                        <p class="section-meta">April 25-26, 2026 | Dallas, TX | ★★★</p>
+                        <p class="section-meta">Average rating: 1,522 | Total distance: 15,821 km | Guest coefficient: 13.7</p>
+                        <div class="tour-edit-actions">
+                            <button class="chip" data-i18n="tour.edit.tournament">Редактировать турнир</button>
+                            <button class="chip" data-i18n="tour.edit.players">Редактировать участников</button>
+                            <button class="chip" data-i18n="tour.edit.rounds">Редактировать раунды</button>
+                        </div>
+                    </div>
+
+                    <div class="section-head">
+                        <h3 data-i18n="tour.participants">Участники</h3>
+                    </div>
+                    <div class="players-table-wrap">
+                        <table class="players-table seating-table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th data-i18n="players.player">Игрок</th>
+                                    <th data-i18n="players.city">Город</th>
+                                    <th data-i18n="players.points">Рейтинг</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>1</td><td><span class="mock-icon player-icon">👤</span><a class="player-link" href="player.html">Cherry Pie</a></td><td>Dallas, TX</td><td>1,424</td></tr>
+                                <tr><td>2</td><td><span class="mock-icon player-icon">👤</span><a class="player-link" href="player.html">daVinci</a></td><td>New York, NY</td><td>1,615</td></tr>
+                                <tr><td>3</td><td><span class="mock-icon player-icon">👤</span><a class="player-link" href="player.html">Gambit</a></td><td>Houston, TX</td><td>2,238</td></tr>
+                                <tr><td>4</td><td><span class="mock-icon player-icon">👤</span><a class="player-link" href="player.html">Holdem</a></td><td>Houston, TX</td><td>1,987</td></tr>
+                                <tr><td>5</td><td><span class="mock-icon player-icon">👤</span><a class="player-link" href="player.html">Sladkiy</a></td><td>Miami, FL</td><td>2,501</td></tr>
+                                <tr><td>6</td><td><span class="mock-icon player-icon">👤</span><a class="player-link" href="player.html">Гений</a></td><td>Katy, TX</td><td>1,523</td></tr>
+                                <tr><td>7</td><td><span class="mock-icon player-icon">👤</span><a class="player-link" href="player.html">Любовник</a></td><td>Dallas, TX</td><td>1,790</td></tr>
+                                <tr><td>8</td><td><span class="mock-icon player-icon">👤</span><a class="player-link" href="player.html">Фурия</a></td><td>Austin, TX</td><td>1,983</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section class="tour-panel" data-tour-panel="standings">
+                    <div class="section-head">
+                        <h2 data-i18n="tour.standings.title">Таблица</h2>
+                        <div class="event-filters">
+                            <button class="chip is-active" data-i18n="tour.scoring">Система: AML club</button>
+                            <button class="chip" data-i18n="tour.mvp">MVP</button>
+                        </div>
+                    </div>
+                    <div class="players-table-wrap standings-wrap">
+                        <table class="players-table standings-table">
+                            <thead>
+                                <tr>
+                                    <th rowspan="2">#</th>
+                                    <th rowspan="2" data-i18n="players.player">Игрок</th>
+                                    <th colspan="4">Баллы</th>
+                                    <th rowspan="2" data-i18n="tour.col.games">Сыграно игр</th>
+                                    <th rowspan="2" data-i18n="tour.col.wins">Победы</th>
+                                </tr>
+                                <tr>
+                                    <th>Сумма</th>
+                                    <th data-i18n="tour.col.points">Осн</th>
+                                    <th data-i18n="tour.col.bonus">Доп</th>
+                                    <th>Ci</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>1</td><td><a class="player-link" href="tournament-player.html">Sladkiy</a></td><td>6.6</td><td>1.2</td><td>0</td><td>7.8</td><td>4</td><td>3</td></tr>
+                                <tr><td>2</td><td><a class="player-link" href="tournament-player.html">Gambit</a></td><td>5.4</td><td>0.8</td><td>0</td><td>6.2</td><td>4</td><td>2</td></tr>
+                                <tr><td>3</td><td><a class="player-link" href="tournament-player.html">Holdem</a></td><td>5.1</td><td>0.7</td><td>0</td><td>5.8</td><td>4</td><td>2</td></tr>
+                                <tr><td>4</td><td><a class="player-link" href="tournament-player.html">Любовник</a></td><td>4.7</td><td>0.4</td><td>0</td><td>5.1</td><td>4</td><td>2</td></tr>
+                                <tr><td>5</td><td><a class="player-link" href="tournament-player.html">Фурия</a></td><td>4.3</td><td>0.5</td><td>0.1</td><td>4.7</td><td>4</td><td>1</td></tr>
+                                <tr><td>6</td><td><a class="player-link" href="tournament-player.html">Cherry Pie</a></td><td>3.8</td><td>0.4</td><td>0</td><td>4.2</td><td>4</td><td>1</td></tr>
+                                <tr><td>7</td><td><a class="player-link" href="tournament-player.html">daVinci</a></td><td>3.7</td><td>0.3</td><td>0</td><td>4.0</td><td>4</td><td>1</td></tr>
+                                <tr><td>8</td><td><a class="player-link" href="tournament-player.html">Гений</a></td><td>3.6</td><td>0.2</td><td>0</td><td>3.8</td><td>4</td><td>1</td></tr>
+                                <tr><td>9</td><td><a class="player-link" href="tournament-player.html">Математик</a></td><td>3.4</td><td>0.2</td><td>0</td><td>3.6</td><td>4</td><td>1</td></tr>
+                                <tr><td>10</td><td><a class="player-link" href="tournament-player.html">Mike95</a></td><td>3.3</td><td>0.1</td><td>0</td><td>3.4</td><td>4</td><td>1</td></tr>
+                                <tr><td>11</td><td><a class="player-link" href="tournament-player.html">Knopka</a></td><td>3.2</td><td>0.1</td><td>0</td><td>3.3</td><td>4</td><td>1</td></tr>
+                                <tr><td>12</td><td><a class="player-link" href="tournament-player.html">Koleno</a></td><td>3.1</td><td>0.1</td><td>0</td><td>3.2</td><td>4</td><td>0</td></tr>
+                                <tr><td>13</td><td><a class="player-link" href="tournament-player.html">Remboy</a></td><td>2.9</td><td>0.2</td><td>0</td><td>3.1</td><td>4</td><td>0</td></tr>
+                                <tr><td>14</td><td><a class="player-link" href="tournament-player.html">Strelets</a></td><td>2.8</td><td>0.2</td><td>0</td><td>3.0</td><td>4</td><td>0</td></tr>
+                                <tr><td>15</td><td><a class="player-link" href="tournament-player.html">Vale</a></td><td>2.7</td><td>0.2</td><td>0</td><td>2.9</td><td>4</td><td>0</td></tr>
+                                <tr><td>16</td><td><a class="player-link" href="tournament-player.html">Toxic</a></td><td>2.6</td><td>0.2</td><td>0</td><td>2.8</td><td>4</td><td>0</td></tr>
+                                <tr><td>17</td><td><a class="player-link" href="tournament-player.html">Wild</a></td><td>2.5</td><td>0.2</td><td>0</td><td>2.7</td><td>4</td><td>0</td></tr>
+                                <tr><td>18</td><td><a class="player-link" href="tournament-player.html">Эл</a></td><td>2.4</td><td>0.1</td><td>0</td><td>2.5</td><td>4</td><td>0</td></tr>
+                                <tr><td>19</td><td><a class="player-link" href="tournament-player.html">Михалыч</a></td><td>2.3</td><td>0.1</td><td>0</td><td>2.4</td><td>4</td><td>0</td></tr>
+                                <tr><td>20</td><td><a class="player-link" href="tournament-player.html">Minnie</a></td><td>2.2</td><td>0.1</td><td>0</td><td>2.3</td><td>4</td><td>0</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section class="tour-panel" data-tour-panel="seating">
+                    <div class="section-head">
+                        <h2 data-i18n="tour.seating.title">Рассадка</h2>
+                        <div class="event-filters">
+                            <button class="chip is-active" data-i18n="tour.view.byGame">По играм</button>
+                            <button class="chip" data-i18n="tour.view.byTable">По столам</button>
+                        </div>
+                    </div>
+                    <div class="players-table-wrap">
+                        <table class="players-table">
+                            <thead>
+                                <tr>
+                                    <th data-i18n="tour.col.game">Игра</th>
+                                    <th data-i18n="tour.col.table">Стол</th>
+                                    <th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Game 1</td><td>Table 1</td><td>Sladkiy</td><td>Gambit</td><td>Holdem</td><td>Cherry Pie</td><td>Гений</td><td>Любовник</td><td>Фурия</td><td>Vale</td><td>Toxic</td><td>Wild</td></tr>
+                                <tr><td>Game 1</td><td>Table 2</td><td>daVinci</td><td>Mike95</td><td>Koleno</td><td>Remboy</td><td>Strelets</td><td>Эл</td><td>Математик</td><td>Михалыч</td><td>Knopka</td><td>Glost</td></tr>
+                                <tr><td>Game 2</td><td>Table 1</td><td>Любовник</td><td>Фурия</td><td>Sladkiy</td><td>Gambit</td><td>Holdem</td><td>Cherry Pie</td><td>Гений</td><td>Vale</td><td>Toxic</td><td>Wild</td></tr>
+                                <tr><td>Game 2</td><td>Table 2</td><td>daVinci</td><td>Mike95</td><td>Koleno</td><td>Remboy</td><td>Strelets</td><td>Эл</td><td>Математик</td><td>Михалыч</td><td>Knopka</td><td>Glost</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section class="tour-panel" data-tour-panel="games">
+                    <div class="section-head">
+                        <h2 data-i18n="tour.games.title">Игры</h2>
+                        <div class="event-filters">
+                            <button class="chip is-active" data-i18n="tour.games.all">Все игры</button>
+                            <button class="chip" data-i18n="tour.games.townWins">Победы города</button>
+                            <button class="chip" data-i18n="tour.games.mafiaWins">Победы мафии</button>
+                        </div>
+                    </div>
+                    <div class="players-table-wrap">
+                        <table class="players-table">
+                            <thead>
+                                <tr>
+                                    <th data-i18n="tour.col.round">Раунд</th>
+                                    <th data-i18n="tour.col.refGame">Стол/Игра</th>
+                                    <th data-i18n="tour.col.result">Результат</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>1</td><td><a class="player-link" href="game.html?id=27503">Table 1, Game 4 - final - Apr 25, 2026, 3:02 pm</a></td><td>final</td></tr>
+                                <tr><td>2</td><td><a class="player-link" href="game.html?id=27502">Table 1, Game 3 - final - Apr 25, 2026, 2:02 pm</a></td><td>final</td></tr>
+                                <tr><td>3</td><td><a class="player-link" href="game.html?id=27501">Table 1, Game 2 - final - Apr 25, 2026, 1:02 pm</a></td><td>final</td></tr>
+                                <tr><td>4</td><td><a class="player-link" href="game.html?id=27500">Table 1, Game 1 - final - Apr 25, 2026, 12:02 pm</a></td><td>final</td></tr>
+                                <tr><td>5</td><td><a class="player-link" href="game.html?id=27499">Table 2, Game 12 - main round - Apr 25, 2026, 11:02 am</a></td><td>main round</td></tr>
+                                <tr><td>6</td><td><a class="player-link" href="game.html?id=27498">Table 1, Game 12 - main round - Apr 25, 2026, 11:02 am</a></td><td>main round</td></tr>
+                                <tr><td>7</td><td><a class="player-link" href="game.html?id=27488">Table 1, Game 7 - main round - Apr 25, 2026, 6:01 am</a></td><td>main round</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>© MafiaRatings</p>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="#">Reports</a>
+                <a href="#">Resources</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MafiaRatings - Tournament Player</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">MafiaRatings</a>
+            <div class="header-actions">
+                <button class="lang-btn is-active" data-lang="ru">RU</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+                <a class="profile-link login-link" href="#"><span class="login-icon">🔑</span><span data-i18n="btn.profile">Profile</span></a>
+            </div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">☰</button>
+        </div>
+    </header>
+
+    <nav class="main-nav-overlay" id="mainNav" aria-hidden="true">
+        <div class="main-nav-panel">
+            <button class="menu-close" id="menuClose" aria-label="Close menu">✕</button>
+            <a href="index.html" class="menu-link root-link" data-i18n="nav.home">Home</a>
+            <a href="#" class="menu-link root-link" data-i18n="nav.ratings">Рейтинги</a>
+            <a href="#" class="menu-link root-link" data-i18n="nav.clubs">Клубы</a>
+            <a href="#" class="menu-link root-link" data-i18n="nav.leagues">Лиги</a>
+            <a href="#" class="menu-link root-link" data-i18n="nav.gameDays">Игровые дни</a>
+            <a href="tournaments.html" class="menu-link root-link" data-i18n="nav.tournaments">Турниры</a>
+            <a href="#" class="menu-link root-link" data-i18n="nav.series">Серии</a>
+            <a href="#" class="menu-link root-link" data-i18n="nav.games">Игры</a>
+            <a href="#" class="menu-link root-link" data-i18n="nav.seating">Рассадки</a>
+        </div>
+    </nav>
+
+    <main class="page-main">
+        <div class="container">
+            <section class="section">
+                <div class="tournament-card">
+                    <div class="tournament-title-line">
+                        <span class="mock-icon tournament-icon">🏆</span>
+                        <h2>Star Wars 2026</h2>
+                    </div>
+                    <p class="section-meta">Игрок: Eluha • April 25-26, 2026 • Dallas, TX</p>
+                </div>
+
+                <div class="tournament-tab-carousel" role="tablist" aria-label="Player tournament sections">
+                    <button class="tour-player-tab is-active" data-tour-player-tab="games" data-i18n="tour.games.title">Игры</button>
+                    <button class="tour-player-tab" data-tour-player-tab="stats" data-i18n="tour.player.stats">Статистика</button>
+                </div>
+
+                <section class="tour-player-panel is-active" data-tour-player-panel="games">
+                    <div class="players-table-wrap">
+                        <table class="players-table tp-games-table">
+                            <colgroup>
+                                <col class="col-game">
+                                <col class="col-pts">
+                                <col class="col-pts">
+                                <col class="col-pts">
+                                <col class="col-pts">
+                                <col class="col-pts">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th rowspan="2" data-i18n="tour.col.gameRole">Игра</th>
+                                    <th colspan="5" data-i18n="tour.col.pointsBreakdown">Очки</th>
+                                </tr>
+                                <tr>
+                                    <th data-i18n="tour.col.pointsMain">Осн</th>
+                                    <th data-i18n="tour.col.pointsBonus">Доп</th>
+                                    <th data-i18n="tour.col.pointsLegacy">ЛХ</th>
+                                    <th data-i18n="tour.col.pointsPenalty">ПУ</th>
+                                    <th data-i18n="tour.col.pointsSum">Σ</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="tp-game-role-cell">
+                                        <div class="tp-game-title-row">
+                                            <a class="player-link" href="game.html?id=27503">Game #27503</a>
+                                            <span class="tp-role-icons"><span class="tp-role-red" title="Red">👍</span></span>
+                                            <span class="tp-outcome tp-outcome-win" title="Win">😊</span>
+                                        </div>
+                                        <div class="tp-game-meta">final</div>
+                                    </td>
+                                    <td class="tp-num">1</td>
+                                    <td class="tp-num"></td>
+                                    <td class="tp-num"></td>
+                                    <td class="tp-num"></td>
+                                    <td class="tp-num tp-num-sum">1</td>
+                                </tr>
+                                <tr>
+                                    <td class="tp-game-role-cell">
+                                        <div class="tp-game-title-row">
+                                            <a class="player-link" href="game.html?id=27502">Game #27502</a>
+                                            <span class="tp-role-icons"><span class="tp-role-sheriff" title="Sheriff">★</span></span>
+                                            <span class="tp-outcome tp-outcome-win" title="Win">😊</span>
+                                        </div>
+                                        <div class="tp-game-meta">final</div>
+                                    </td>
+                                    <td class="tp-num">2</td>
+                                    <td class="tp-num">1</td>
+                                    <td class="tp-num"></td>
+                                    <td class="tp-num"></td>
+                                    <td class="tp-num tp-num-sum">3</td>
+                                </tr>
+                                <tr>
+                                    <td class="tp-game-role-cell">
+                                        <div class="tp-game-title-row">
+                                            <a class="player-link" href="game.html?id=27501">Game #27501</a>
+                                            <span class="tp-role-icons"><span class="tp-role-black" title="Black">👎</span></span>
+                                            <span class="tp-outcome tp-outcome-win" title="Win">😊</span>
+                                        </div>
+                                        <div class="tp-game-meta">final</div>
+                                    </td>
+                                    <td class="tp-num">1</td>
+                                    <td class="tp-num">0.8</td>
+                                    <td class="tp-num"></td>
+                                    <td class="tp-num"></td>
+                                    <td class="tp-num tp-num-sum">1.8</td>
+                                </tr>
+                                <tr>
+                                    <td class="tp-game-role-cell">
+                                        <div class="tp-game-title-row">
+                                            <a class="player-link" href="game.html?id=27500">Game #27500</a>
+                                            <span class="tp-role-icons"><span class="tp-role-don" title="Don">💎</span></span>
+                                            <span class="tp-outcome tp-outcome-lose" title="Lose">😨</span>
+                                        </div>
+                                        <div class="tp-game-meta">final</div>
+                                    </td>
+                                    <td class="tp-num">2</td>
+                                    <td class="tp-num">1</td>
+                                    <td class="tp-num"></td>
+                                    <td class="tp-num"></td>
+                                    <td class="tp-num tp-num-sum">3</td>
+                                </tr>
+                                <tr>
+                                    <td class="tp-game-role-cell">
+                                        <div class="tp-game-title-row">
+                                            <a class="player-link" href="game.html?id=27498">Game #27498</a>
+                                            <span class="tp-role-icons"><span class="tp-role-red" title="Red">👍</span></span>
+                                            <span class="tp-outcome tp-outcome-lose" title="Lose">😨</span>
+                                        </div>
+                                        <div class="tp-game-meta">main round</div>
+                                    </td>
+                                    <td class="tp-num">2</td>
+                                    <td class="tp-num">1.4</td>
+                                    <td class="tp-num"></td>
+                                    <td class="tp-num"></td>
+                                    <td class="tp-num tp-num-sum">3.4</td>
+                                </tr>
+                                <tr>
+                                    <td class="tp-game-role-cell">
+                                        <div class="tp-game-title-row">
+                                            <a class="player-link" href="game.html?id=27496">Game #27496</a>
+                                            <span class="tp-role-icons"><span class="tp-role-black" title="Black">👎</span></span>
+                                            <span class="tp-outcome tp-outcome-lose" title="Lose">😨</span>
+                                        </div>
+                                        <div class="tp-game-meta">main round</div>
+                                    </td>
+                                    <td class="tp-num">1</td>
+                                    <td class="tp-num"></td>
+                                    <td class="tp-num"></td>
+                                    <td class="tp-num"></td>
+                                    <td class="tp-num tp-num-sum">1</td>
+                                </tr>
+                                <tr>
+                                    <td class="tp-game-role-cell">
+                                        <div class="tp-game-title-row">
+                                            <a class="player-link" href="game.html?id=27492">Game #27492</a>
+                                            <span class="tp-role-icons"><span class="tp-role-sheriff" title="Sheriff">★</span></span>
+                                            <span class="tp-outcome tp-outcome-win" title="Win">😊</span>
+                                        </div>
+                                        <div class="tp-game-meta">main round</div>
+                                    </td>
+                                    <td class="tp-num">1</td>
+                                    <td class="tp-num"></td>
+                                    <td class="tp-num">0.2</td>
+                                    <td class="tp-num">0.2</td>
+                                    <td class="tp-num tp-num-sum">1.4</td>
+                                </tr>
+                                <tr>
+                                    <td class="tp-game-role-cell">
+                                        <div class="tp-game-title-row">
+                                            <a class="player-link" href="game.html?id=27488">Game #27488</a>
+                                            <span class="tp-role-icons"><span class="tp-role-don" title="Don">💎</span></span>
+                                            <span class="tp-outcome tp-outcome-win" title="Win">😊</span>
+                                        </div>
+                                        <div class="tp-game-meta">main round</div>
+                                    </td>
+                                    <td class="tp-num">1</td>
+                                    <td class="tp-num">0.6</td>
+                                    <td class="tp-num"></td>
+                                    <td class="tp-num"></td>
+                                    <td class="tp-num tp-num-sum">1.6</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section class="tour-player-panel" data-tour-player-panel="stats">
+                    <div class="players-table-wrap">
+                        <table class="players-table">
+                            <thead>
+                                <tr>
+                                    <th data-i18n="tour.player.mainPoints">Main points</th>
+                                    <th data-i18n="tour.player.bonusPoints">Bonus points</th>
+                                    <th data-i18n="tour.player.legacyPoints">Legacy points</th>
+                                    <th data-i18n="tour.player.penaltyPoints">Penalty points</th>
+                                    <th>Ci</th>
+                                    <th>∑</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>10.2</td><td>5.85</td><td>5.16</td><td>0.5</td><td>0.9</td><td>22.61</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="section-meta" data-i18n="tour.player.statsHint">A: points for actions in the game rated by the referee. B: auto-bonus.</p>
+                </section>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>© MafiaRatings</p>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="#">Reports</a>
+                <a href="#">Resources</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

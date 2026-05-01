@@ -13,7 +13,7 @@
             <div class="header-actions">
                 <button class="lang-btn is-active" data-lang="ru">RU</button>
                 <button class="lang-btn" data-lang="en">EN</button>
-                <a class="profile-link" href="#" data-i18n="btn.profile">Profile</a>
+                <a class="profile-link login-link" href="#"><span class="login-icon">🔑</span><span data-i18n="btn.profile">Profile</span></a>
             </div>
             <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">☰</button>
         </div>
@@ -22,12 +22,12 @@
     <nav class="main-nav-overlay" id="mainNav" aria-hidden="true">
         <div class="main-nav-panel">
             <button class="menu-close" id="menuClose" aria-label="Close menu">✕</button>
-            <a href="#" class="menu-link root-link" data-i18n="nav.home">Home</a>
+            <a href="index.html" class="menu-link root-link" data-i18n="nav.home">Home</a>
             <a href="#" class="menu-link root-link" data-i18n="nav.ratings">Рейтинги</a>
             <a href="#" class="menu-link root-link" data-i18n="nav.clubs">Клубы</a>
             <a href="#" class="menu-link root-link" data-i18n="nav.leagues">Лиги</a>
             <a href="#" class="menu-link root-link" data-i18n="nav.gameDays">Игровые дни</a>
-            <a href="#" class="menu-link root-link" data-i18n="nav.tournaments">Турниры</a>
+            <a href="tournaments.html" class="menu-link root-link" data-i18n="nav.tournaments">Турниры</a>
             <a href="#" class="menu-link root-link" data-i18n="nav.series">Серии</a>
             <a href="#" class="menu-link root-link" data-i18n="nav.games">Игры</a>
             <a href="#" class="menu-link root-link" data-i18n="nav.seating">Рассадки</a>
@@ -66,45 +66,46 @@
             <div class="left-column">
                 <section class="section mobile-section is-active" id="events" data-mobile-section="events">
                     <div class="section-head">
-                        <h2 data-i18n="events.title">Турниры и сезоны</h2>
+                        <h2 data-i18n="events.title">Турниры</h2>
+                        <a href="tournaments.html" class="section-action-btn" data-i18n="events.fullList">Подробный список</a>
                     </div>
                     <div class="event-grid">
-                        <article class="event-card">
+                        <a href="tournament.html" class="event-card event-card-link">
                             <div class="event-title-row"><span class="mock-icon tournament-icon">🏆</span><h3>Freedom Cup</h3></div>
                             <span class="badge badge-upcoming" data-status="upcoming">upcoming</span>
                             <p>May 16-17, 2026</p>
                             <small>Maf is...</small>
-                        </article>
-                        <article class="event-card">
+                        </a>
+                        <a href="tournament.html" class="event-card event-card-link">
                             <div class="event-title-row"><span class="mock-icon tournament-icon">🏆</span><h3>MAF Marathon 2026</h3></div>
                             <span class="badge badge-upcoming" data-status="upcoming">upcoming</span>
                             <p>May 16-17, 2026</p>
                             <small>LA MafClub</small>
-                        </article>
-                        <article class="event-card">
+                        </a>
+                        <a href="tournament.html" class="event-card event-card-link">
                             <div class="event-title-row"><span class="mock-icon tournament-icon">🏆</span><h3>Cascadia Cup 2026</h3></div>
                             <span class="badge badge-upcoming" data-status="upcoming">upcoming</span>
                             <p>August 28-30, 2026</p>
                             <small>Mafia of Vancouver in Russian</small>
-                        </article>
-                        <article class="event-card">
+                        </a>
+                        <a href="tournament.html" class="event-card event-card-link">
                             <div class="event-title-row"><span class="mock-icon tournament-icon">🏆</span><h3>Season 2025-2026</h3></div>
                             <span class="badge badge-active" data-status="active">active</span>
                             <p>2025-2026</p>
                             <small>American Mafia League</small>
-                        </article>
-                        <article class="event-card">
+                        </a>
+                        <a href="tournament.html" class="event-card event-card-link">
                             <div class="event-title-row"><span class="mock-icon tournament-icon">🏆</span><h3>April 2026</h3></div>
                             <span class="badge badge-finished" data-status="finished">finished</span>
                             <p>April 2026</p>
                             <small>Maf is...</small>
-                        </article>
-                        <article class="event-card">
+                        </a>
+                        <a href="tournament.html" class="event-card event-card-link">
                             <div class="event-title-row"><span class="mock-icon tournament-icon">🏆</span><h3>Birthday Cup</h3></div>
                             <span class="badge badge-upcoming" data-status="upcoming">upcoming</span>
                             <p>September 26-27, 2026</p>
                             <small>Maf is...</small>
-                        </article>
+                        </a>
                     </div>
                 </section>
 
@@ -116,12 +117,12 @@
                     <p class="section-meta" data-i18n="changes.since">С последнего обновления: 29 Apr 2026</p>
                     <div class="change-col">
                         <h3 data-i18n="changes.list">Все изменения</h3>
-                        <div class="change-row up"><span><span class="mock-icon player-icon">👤</span>Professor_</span><span>#66 -> #65 ▲</span></div>
-                        <div class="change-row up"><span><span class="mock-icon player-icon">👤</span>Eluha</span><span>#3 -> #2 ▲</span></div>
-                        <div class="change-row down"><span><span class="mock-icon player-icon">👤</span>TumASYAn</span><span>#85 -> #87 ▼</span></div>
-                        <div class="change-row down"><span><span class="mock-icon player-icon">👤</span>sher</span><span>#1 -> #2 ▼</span></div>
-                        <div class="change-row up"><span><span class="mock-icon player-icon">👤</span>Belarus</span><span>#12 -> #11 ▲</span></div>
-                        <div class="change-row down"><span><span class="mock-icon player-icon">👤</span>America</span><span>#7 -> #8 ▼</span></div>
+                        <div class="change-row up"><span><span class="mock-icon player-icon">👤</span><a class="player-link" href="player.html">Professor_</a></span><span>#66 -> #65 ▲</span></div>
+                        <div class="change-row up"><span><span class="mock-icon player-icon">👤</span><a class="player-link" href="player.html">Eluha</a></span><span>#3 -> #2 ▲</span></div>
+                        <div class="change-row down"><span><span class="mock-icon player-icon">👤</span><a class="player-link" href="player.html">TumASYAn</a></span><span>#85 -> #87 ▼</span></div>
+                        <div class="change-row down"><span><span class="mock-icon player-icon">👤</span><a class="player-link" href="player.html">sher</a></span><span>#1 -> #2 ▼</span></div>
+                        <div class="change-row up"><span><span class="mock-icon player-icon">👤</span><a class="player-link" href="player.html">Belarus</a></span><span>#12 -> #11 ▲</span></div>
+                        <div class="change-row down"><span><span class="mock-icon player-icon">👤</span><a class="player-link" href="player.html">America</a></span><span>#7 -> #8 ▼</span></div>
                     </div>
                 </section>
             </div>
@@ -146,26 +147,26 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr><td>1</td><td><span class="mock-icon player-icon">👤</span>Eluha</td><td>Sunnyvale, CA</td><td>2,685</td></tr>
-                                <tr><td>2</td><td><span class="mock-icon player-icon">👤</span>sher</td><td>Chicago, IL</td><td>2,640</td></tr>
-                                <tr><td>3</td><td><span class="mock-icon player-icon">👤</span>Пряник</td><td>New York, NY</td><td>2,617</td></tr>
-                                <tr><td>4</td><td><span class="mock-icon player-icon">👤</span>Eva</td><td>Sunnyvale, CA</td><td>2,575</td></tr>
-                                <tr><td>5</td><td><span class="mock-icon player-icon">👤</span>Шнурок</td><td>Seattle, WA</td><td>2,525</td></tr>
-                                <tr><td>6</td><td><span class="mock-icon player-icon">👤</span>Бандера</td><td>Miami, FL</td><td>2,504</td></tr>
-                                <tr><td>7</td><td><span class="mock-icon player-icon">👤</span>Мэр города</td><td>Nashville, TN</td><td>2,472</td></tr>
-                                <tr><td>8</td><td><span class="mock-icon player-icon">👤</span>America</td><td>New York, NY</td><td>2,451</td></tr>
-                                <tr><td>9</td><td><span class="mock-icon player-icon">👤</span>Sladkiy</td><td>Miami, FL</td><td>2,449</td></tr>
-                                <tr><td>10</td><td><span class="mock-icon player-icon">👤</span>Ювелир</td><td>Vancouver, BC</td><td>2,431</td></tr>
-                                <tr><td>11</td><td><span class="mock-icon player-icon">👤</span>Belarus</td><td>Vienna, VA</td><td>2,348</td></tr>
-                                <tr><td>12</td><td><span class="mock-icon player-icon">👤</span>tokyo</td><td>Miami, FL</td><td>2,316</td></tr>
-                                <tr><td>13</td><td><span class="mock-icon player-icon">👤</span>ПК</td><td>Garland, TX</td><td>2,304</td></tr>
-                                <tr><td>14</td><td><span class="mock-icon player-icon">👤</span>ART LA</td><td>Los Angeles, CA</td><td>2,300</td></tr>
-                                <tr><td>15</td><td><span class="mock-icon player-icon">👤</span>Sasha Sasha</td><td>Kirkland, WA</td><td>2,300</td></tr>
-                                <tr><td>16</td><td><span class="mock-icon player-icon">👤</span>Luso</td><td>Los Angeles, CA</td><td>2,282</td></tr>
-                                <tr><td>17</td><td><span class="mock-icon player-icon">👤</span>filister</td><td>Indianapolis, IN</td><td>2,276</td></tr>
-                                <tr><td>18</td><td><span class="mock-icon player-icon">👤</span>Batman</td><td>Staten Island, NY</td><td>2,269</td></tr>
-                                <tr><td>19</td><td><span class="mock-icon player-icon">👤</span>Solaris</td><td>Montreal, QC</td><td>2,246</td></tr>
-                                <tr><td>20</td><td><span class="mock-icon player-icon">👤</span>InnaChe</td><td>San Francisco, CA</td><td>2,215</td></tr>
+                                <tr><td>1</td><td><span class="mock-icon player-icon">👤</span><a class="player-link" href="player.html">Eluha</a></td><td>Sunnyvale, CA</td><td>2,685</td></tr>
+                                <tr><td>2</td><td><span class="mock-icon player-icon">👤</span><a class="player-link" href="player.html">sher</a></td><td>Chicago, IL</td><td>2,640</td></tr>
+                                <tr><td>3</td><td><span class="mock-icon player-icon">👤</span><a class="player-link" href="player.html">Пряник</a></td><td>New York, NY</td><td>2,617</td></tr>
+                                <tr><td>4</td><td><span class="mock-icon player-icon">👤</span><a class="player-link" href="player.html">Eva</a></td><td>Sunnyvale, CA</td><td>2,575</td></tr>
+                                <tr><td>5</td><td><span class="mock-icon player-icon">👤</span><a class="player-link" href="player.html">Шнурок</a></td><td>Seattle, WA</td><td>2,525</td></tr>
+                                <tr><td>6</td><td><span class="mock-icon player-icon">👤</span><a class="player-link" href="player.html">Бандера</a></td><td>Miami, FL</td><td>2,504</td></tr>
+                                <tr><td>7</td><td><span class="mock-icon player-icon">👤</span><a class="player-link" href="player.html">Мэр города</a></td><td>Nashville, TN</td><td>2,472</td></tr>
+                                <tr><td>8</td><td><span class="mock-icon player-icon">👤</span><a class="player-link" href="player.html">America</a></td><td>New York, NY</td><td>2,451</td></tr>
+                                <tr><td>9</td><td><span class="mock-icon player-icon">👤</span><a class="player-link" href="player.html">Sladkiy</a></td><td>Miami, FL</td><td>2,449</td></tr>
+                                <tr><td>10</td><td><span class="mock-icon player-icon">👤</span><a class="player-link" href="player.html">Ювелир</a></td><td>Vancouver, BC</td><td>2,431</td></tr>
+                                <tr><td>11</td><td><span class="mock-icon player-icon">👤</span><a class="player-link" href="player.html">Belarus</a></td><td>Vienna, VA</td><td>2,348</td></tr>
+                                <tr><td>12</td><td><span class="mock-icon player-icon">👤</span><a class="player-link" href="player.html">tokyo</a></td><td>Miami, FL</td><td>2,316</td></tr>
+                                <tr><td>13</td><td><span class="mock-icon player-icon">👤</span><a class="player-link" href="player.html">ПК</a></td><td>Garland, TX</td><td>2,304</td></tr>
+                                <tr><td>14</td><td><span class="mock-icon player-icon">👤</span><a class="player-link" href="player.html">ART LA</a></td><td>Los Angeles, CA</td><td>2,300</td></tr>
+                                <tr><td>15</td><td><span class="mock-icon player-icon">👤</span><a class="player-link" href="player.html">Sasha Sasha</a></td><td>Kirkland, WA</td><td>2,300</td></tr>
+                                <tr><td>16</td><td><span class="mock-icon player-icon">👤</span><a class="player-link" href="player.html">Luso</a></td><td>Los Angeles, CA</td><td>2,282</td></tr>
+                                <tr><td>17</td><td><span class="mock-icon player-icon">👤</span><a class="player-link" href="player.html">filister</a></td><td>Indianapolis, IN</td><td>2,276</td></tr>
+                                <tr><td>18</td><td><span class="mock-icon player-icon">👤</span><a class="player-link" href="player.html">Batman</a></td><td>Staten Island, NY</td><td>2,269</td></tr>
+                                <tr><td>19</td><td><span class="mock-icon player-icon">👤</span><a class="player-link" href="player.html">Solaris</a></td><td>Montreal, QC</td><td>2,246</td></tr>
+                                <tr><td>20</td><td><span class="mock-icon player-icon">👤</span><a class="player-link" href="player.html">InnaChe</a></td><td>San Francisco, CA</td><td>2,215</td></tr>
                             </tbody>
                         </table>
                     </div>

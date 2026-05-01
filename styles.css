@@ -70,6 +70,17 @@ body {
     gap: 10px;
 }
 
+.login-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.login-icon {
+    font-size: 0.9rem;
+    line-height: 1;
+}
+
 .lang-btn {
     border: 1px solid var(--border);
     background: var(--surface);
@@ -225,6 +236,22 @@ h2 {
     color: var(--muted);
 }
 
+.section-action-btn {
+    text-decoration: none;
+    color: var(--muted);
+    background: #f1f3f6;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.section-action-btn:hover {
+    color: var(--text);
+    background: #e8ebf0;
+}
+
 .event-filters {
     display: flex;
     gap: 8px;
@@ -251,6 +278,12 @@ h2 {
 
 .event-card {
     padding: 14px;
+}
+
+.event-card-link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
 }
 
 .event-title-row {
@@ -376,6 +409,611 @@ h2 {
     margin-right: 6px;
 }
 
+.player-link {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px dashed transparent;
+}
+
+.player-link:hover {
+    color: var(--brand);
+    border-bottom-color: var(--brand);
+}
+
+.club-icon {
+    background: #eceff3;
+    margin-right: 6px;
+}
+
+.tournaments-table td {
+    vertical-align: middle;
+}
+
+.tournament-main {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+}
+
+.tournament-club {
+    margin-top: 6px;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.92rem;
+}
+
+.tournament-date {
+    margin-top: 4px;
+    color: #6b7280;
+    font-size: 0.82rem;
+    font-weight: 500;
+}
+
+.month-cell {
+    font-weight: 700;
+    color: #374151;
+    background: #f4f5f7;
+}
+
+.tournament-tab-carousel {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+    margin-bottom: 18px;
+}
+
+.tour-tab {
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--muted);
+    border-radius: 999px;
+    padding: 10px 14px;
+    white-space: nowrap;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.tour-tab.is-active {
+    background: var(--brand);
+    color: #fff;
+    border-color: var(--brand);
+}
+
+.tour-panel {
+    display: none;
+}
+
+.tour-panel.is-active {
+    display: block;
+}
+
+.tour-player-panel {
+    display: none;
+}
+
+.tour-player-panel.is-active {
+    display: block;
+}
+
+.tp-games-table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.tp-games-table col.col-game {
+    width: 50%;
+}
+
+.tp-games-table col.col-pts {
+    width: 10%;
+}
+
+.tp-game-role-cell {
+    min-width: 0;
+    vertical-align: top;
+}
+
+.tp-game-title-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    min-width: 0;
+}
+
+.tp-game-title-row .player-link {
+    min-width: 0;
+    word-break: break-word;
+}
+
+.tp-game-meta {
+    margin-top: 4px;
+    font-size: 0.85rem;
+    color: var(--muted);
+}
+
+.tp-role-icons {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    flex-shrink: 0;
+}
+
+.tp-role-red {
+    color: #dc2626;
+}
+
+.tp-role-black {
+    color: #111827;
+}
+
+.tp-role-don {
+    line-height: 1;
+}
+
+.tp-role-sheriff {
+    color: #2563eb;
+    font-size: 1.15rem;
+    line-height: 1;
+}
+
+.tp-outcome {
+    font-size: 1.15rem;
+    vertical-align: middle;
+}
+
+.tp-games-table .tp-num {
+    text-align: center;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.tp-games-table .tp-num-sum {
+    font-weight: 700;
+    background: #e8ebf2;
+}
+
+.tp-games-table thead tr:last-child th:not(:first-child) {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.tp-games-table thead th:not(:first-child) {
+    text-align: center;
+}
+
+@media (max-width: 640px) {
+    .tp-games-table {
+        font-size: 0.78rem;
+    }
+
+    .tp-games-table th,
+    .tp-games-table td {
+        padding: 8px 4px;
+    }
+
+    .tp-games-table col.col-game {
+        width: 52%;
+    }
+
+    .tp-games-table col.col-pts {
+        width: 9.6%;
+    }
+
+    .tp-outcome {
+        font-size: 1rem;
+    }
+
+    .tp-role-sheriff {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .tp-games-table {
+        font-size: 0.72rem;
+    }
+
+    .tp-games-table th,
+    .tp-games-table td {
+        padding: 6px 3px;
+    }
+}
+
+.tournament-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(17, 24, 39, 0.06);
+    padding: 14px;
+    margin-bottom: 16px;
+}
+
+.tournament-title-line {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tournament-title-line h2 {
+    margin: 0;
+}
+
+.tour-edit-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+}
+
+.standings-wrap {
+    max-height: 68vh;
+    overflow: auto;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--surface);
+}
+
+.standings-table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.standings-table thead th {
+    position: sticky;
+    top: 0;
+    z-index: 12;
+    background: #f6f7fb;
+    background-clip: padding-box;
+    box-shadow: none;
+    border-bottom: 1px solid var(--border);
+}
+
+.standings-table thead tr:first-child th {
+    top: 0;
+    z-index: 14;
+    border-bottom: 0;
+}
+
+.standings-table thead tr:nth-child(2) th {
+    top: 42px;
+    z-index: 13;
+    border-bottom: 1px solid var(--border);
+    box-shadow: none;
+}
+
+.player-rating-chart-wrap {
+    padding: 12px 14px 16px;
+    margin-bottom: 16px;
+}
+
+#playerRatingChart {
+    width: 100%;
+    height: 280px;
+    display: block;
+}
+
+.player-achievements {
+    margin-top: 8px;
+}
+
+.section-head--achievements {
+    background: linear-gradient(180deg, #eceef2 0%, #dfe3ea 100%);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px 16px;
+    margin-bottom: 16px;
+}
+
+.section-head--achievements h3 {
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.achievement-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    border: 1px solid #c9bfa8;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #faf6ef;
+    color: var(--text);
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(17, 24, 39, 0.06);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.achievement-card:hover {
+    box-shadow: 0 10px 28px rgba(17, 24, 39, 0.12);
+    transform: translateY(-2px);
+}
+
+.achievement-card:focus-visible {
+    outline: 2px solid var(--brand);
+    outline-offset: 2px;
+}
+
+.achievement-card__body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 14px 10px 12px;
+    gap: 8px;
+}
+
+.achievement-rank {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.achievement-medal {
+    position: relative;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    box-shadow:
+        inset 0 2px 5px rgba(255, 255, 255, 0.5),
+        inset 0 -4px 8px rgba(0, 0, 0, 0.15),
+        0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.achievement-medal::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -9px;
+    transform: translateX(-50%);
+    width: 13px;
+    height: 11px;
+    background: linear-gradient(180deg, #e53935, #8b0000);
+    border-radius: 0 0 3px 3px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.achievement-medal--gold {
+    background: radial-gradient(circle at 32% 28%, #fffef0, #f0d060 38%, #b8860b 95%);
+}
+
+.achievement-medal--silver {
+    background: radial-gradient(circle at 32% 28%, #ffffff, #d8d8d8 40%, #8a9099 95%);
+}
+
+.achievement-medal--bronze {
+    background: radial-gradient(circle at 32% 28%, #ffe8d0, #cd7f32 42%, #6b3f14 95%);
+}
+
+.achievement-rank-text {
+    font-size: 0.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+    max-width: 100%;
+}
+
+.achievement-banner {
+    --banner-h: 200;
+    width: 100%;
+    max-width: 118px;
+    height: 38px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+    background: linear-gradient(
+        135deg,
+        hsl(var(--banner-h), 72%, 42%) 0%,
+        hsl(calc(var(--banner-h) + 18), 65%, 28%) 100%
+    );
+    border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.achievement-stars {
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+    line-height: 1;
+    color: #ca8a04;
+}
+
+.achievement-date {
+    font-size: 0.78rem;
+    color: var(--muted);
+    margin-top: auto;
+    padding-top: 2px;
+}
+
+.achievement-card__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 10px 12px;
+    min-height: 46px;
+    background: linear-gradient(180deg, #6b7280 0%, #4b5563 100%);
+    color: #f9fafb;
+    font-size: 0.78rem;
+    font-weight: 700;
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.achievement-tournament-name {
+    flex: 1;
+    min-width: 0;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.achievement-card:hover .achievement-tournament-name {
+    text-decoration: underline;
+}
+
+.achievement-club .mock-icon {
+    width: 28px;
+    height: 28px;
+    margin: 0;
+    font-size: 0.85rem;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.desktop-only {
+    display: block;
+}
+
+.game-breadcrumb {
+    margin: 0 0 12px;
+}
+
+.game-hero-card .game-title-line {
+    align-items: flex-start;
+}
+
+.game-page-title {
+    margin: 0;
+    font-size: 1.15rem;
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+.game-meta-table-wrap {
+    margin-top: 14px;
+    overflow-x: auto;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+}
+
+.game-meta-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+}
+
+.game-meta-table th,
+.game-meta-table td {
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+}
+
+.game-meta-table thead th {
+    background: #f6f7fb;
+    color: var(--muted);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.game-meta-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.game-section .prose-block {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px 16px;
+}
+
+.game-ref-notes {
+    margin: 0;
+    padding-left: 1.1rem;
+    color: var(--text);
+    line-height: 1.55;
+}
+
+.game-ref-notes li {
+    margin-bottom: 8px;
+}
+
+.game-ref-notes li:last-child {
+    margin-bottom: 0;
+}
+
+.game-players-wrap {
+    overflow-x: auto;
+}
+
+.game-players-table .col-seat {
+    width: 40px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.role-cell {
+    text-align: center;
+    vertical-align: middle;
+    width: 3rem;
+}
+
+.role-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    line-height: 1;
+}
+
+.role-icon--don {
+    filter: saturate(1.1);
+}
+
+.role-icon--mafia {
+    font-size: 1.15rem;
+}
+
+.role-icon--sheriff {
+    font-size: 1.35rem;
+    color: #1d4ed8;
+}
+
+.game-dops-cell {
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+    font-weight: 600;
+    text-align: right;
+}
+
+.dop-val--plus {
+    color: var(--up);
+}
+
+.dop-val--minus {
+    color: var(--down);
+}
+
+.game-comment-cell {
+    font-size: 0.88rem;
+    line-height: 1.45;
+    color: var(--muted);
+    min-width: 220px;
+    max-width: 420px;
+}
+
 .site-footer {
     border-top: 1px solid var(--border);
     padding: 24px 0 40px;
@@ -432,6 +1070,27 @@ h2 {
     .mobile-section.is-active {
         display: block;
     }
+
+    .standings-table thead tr:first-child th {
+        top: 0;
+    }
+
+    .standings-table thead tr:nth-child(2) th {
+        top: 38px;
+    }
+
+    .desktop-only {
+        display: none;
+    }
+
+    .game-players-table th.game-comment-col,
+    .game-players-table td.game-comment-cell {
+        display: none;
+    }
+
+    .achievements-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
 }
 
 @media (max-width: 640px) {
@@ -455,5 +1114,82 @@ h2 {
 
     .section {
         padding-bottom: 36px;
+    }
+
+    .tournaments-table thead th {
+        font-size: 0.72rem;
+        padding: 8px 6px;
+    }
+
+    .tournaments-table .col-month {
+        width: 22px;
+        min-width: 22px;
+        max-width: 22px;
+        text-align: center;
+        padding: 6px 2px;
+    }
+
+    .tournaments-table .col-count {
+        width: 56px;
+        min-width: 56px;
+        max-width: 56px;
+        text-align: center;
+        padding: 8px 4px;
+        font-weight: 700;
+    }
+
+    .tournaments-table .col-tournament {
+        padding: 8px;
+    }
+
+    .month-cell {
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        white-space: nowrap;
+        letter-spacing: 0.02em;
+        font-size: 0.62rem;
+        line-height: 1;
+    }
+
+    .tournament-main {
+        align-items: flex-start;
+        font-size: 0.9rem;
+    }
+
+    .tournament-club {
+        font-size: 0.76rem;
+        margin-top: 4px;
+    }
+
+    .tournament-date {
+        font-size: 0.72rem;
+        margin-top: 3px;
+    }
+
+    .tournament-club .club-icon,
+    .tournament-main .tournament-icon {
+        width: 20px;
+        height: 20px;
+        font-size: 0.7rem;
+    }
+
+    .achievements-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .achievement-card__body {
+        padding: 12px 8px 10px;
+    }
+
+    .achievement-card__footer {
+        font-size: 0.7rem;
+        padding: 8px 10px;
+        min-height: 42px;
+    }
+
+    .achievement-medal {
+        width: 36px;
+        height: 36px;
     }
 }

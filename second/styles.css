@@ -482,28 +482,25 @@ main {
 
 .world-map {
   position: relative;
+  display: grid;
+  place-items: center;
   min-height: 488px;
   overflow: hidden;
   background:
-    radial-gradient(circle at 28% 30%, rgba(40, 95, 214, 0.12), transparent 32%),
-    radial-gradient(circle at 76% 52%, rgba(31, 159, 131, 0.1), transparent 28%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(248, 251, 255, 0.86)),
     #f8fbff;
   border: 1px solid rgba(221, 229, 239, 0.9);
   border-radius: 22px;
 }
 
-.world-map svg {
-  position: absolute;
-  inset: 8% 4%;
-  width: 92%;
-  height: 84%;
-}
-
-.land {
-  fill: #dbe8f8;
-  stroke: #c6d7ed;
-  stroke-width: 5;
-  stroke-linejoin: round;
+.world-map-image {
+  width: min(92%, 760px);
+  height: auto;
+  opacity: 0.72;
+  filter: saturate(1.35) hue-rotate(8deg);
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  user-select: none;
 }
 
 .map-dot {
@@ -526,12 +523,12 @@ main {
   box-shadow: 0 0 0 12px rgba(255, 31, 72, 0.2), 0 0 34px rgba(255, 31, 72, 0.96);
 }
 
-.dot-la { left: 18.5%; top: 48%; }
-.dot-sv { left: 16.8%; top: 45.4%; }
-.dot-van { left: 17.3%; top: 39.8%; }
-.dot-chi { left: 27.4%; top: 42.8%; }
-.dot-ny { left: 33%; top: 44.6%; }
-.dot-mia { left: 29.8%; top: 56.8%; }
+.dot-la { left: 18.8%; top: 47.8%; }
+.dot-sv { left: 17.2%; top: 44.7%; }
+.dot-van { left: 17.8%; top: 39.4%; }
+.dot-chi { left: 27.1%; top: 42.2%; }
+.dot-ny { left: 32.2%; top: 43.9%; }
+.dot-mia { left: 29.1%; top: 55.1%; }
 
 .club-rail {
   display: grid;

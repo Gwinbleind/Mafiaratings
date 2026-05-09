@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MafiaRatings Design Improvement Report</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+      color: #111827;
+      background: #f7f8fa;
+      line-height: 1.6;
+    }
+
+    main {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.1;
+      letter-spacing: 0;
+    }
+
+    h1 {
+      margin: 0 0 20px;
+      font-size: 42px;
+    }
+
+    h2 {
+      margin-top: 42px;
+      font-size: 28px;
+    }
+
+    h3 {
+      margin-top: 30px;
+      font-size: 21px;
+    }
+
+    .callout {
+      border: 1px solid #bfdbfe;
+      background: #eff6ff;
+      border-radius: 8px;
+      padding: 18px 20px;
+      margin: 24px 0;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      border-radius: 8px;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 12px 32px rgba(17, 24, 39, 0.10);
+      margin: 14px 0 8px;
+    }
+
+    a {
+      color: #b42318;
+      font-weight: 700;
+    }
+
+    code, pre {
+      font-family: "SFMono-Regular", Consolas, monospace;
+    }
+
+    pre {
+      overflow: auto;
+      background: #111827;
+      color: #f9fafb;
+      border-radius: 8px;
+      padding: 16px;
+    }
+
+    ul {
+      padding-left: 22px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Design Improvement: MafiaRatings Homepage</h1>
+
+    <div class="callout">
+      <strong>TL;DR</strong>
+      <p>Turn the homepage into a competition command center: a strong leaderboard hero, compact event cards, and a separate rating-movement module. The current page has the right data, but the visual hierarchy makes everything feel equally important.</p>
+    </div>
+
+    <h2>Current State</h2>
+    <img src="references/current.png" alt="Current MafiaRatings homepage">
+    <p>The current homepage is functional and already focused on tournaments, rating changes, and top players. The redesign keeps that data model, but changes the first impression from static list page to live ranking product.</p>
+
+    <h2>New Concept</h2>
+    <p><a href="mafiaratings-modern-concept.html">Open the modern concept</a></p>
+    <img src="references/modern-concept.png" alt="Modern MafiaRatings concept screenshot">
+
+    <h2>Improvement Ideas</h2>
+    <h3>1. Make the leaderboard the hero</h3>
+    <p>Lead with the product's most valuable asset: the ranking table. The new concept puts a live rating board next to the headline, so visitors understand the site in one glance.</p>
+    <img src="references/prorank.png" alt="ProRank reference">
+    <p>Source: <a href="https://www.prorank.gg/">prorank.gg</a></p>
+    <p><strong>Why this works:</strong> MafiaRatings is fundamentally a trust and status product. Showing the top board immediately makes the homepage feel current, useful, and specific.</p>
+
+    <pre>+----------------------+  +---------------------------+
+| Know the table...    |  | Live rating board         |
+| Short value copy     |  | #1 Player      2,685      |
+| [Ratings] [Events]   |  | #2 Player      2,640      |
+| stat stat stat       |  | #3 Player      2,617      |
++----------------------+  +---------------------------+</pre>
+
+    <h3>2. Separate events from rating movement</h3>
+    <p>Keep tournaments as a clean card grid, then give rating changes their own section. This prevents upcoming events, recent changes, and top players from competing in one cramped layout.</p>
+    <img src="references/trackscore.png" alt="TrackScore reference">
+    <p>Source: <a href="https://trackscore.online/">trackscore.online</a></p>
+
+    <h3>3. Add a local-scene signal</h3>
+    <p>The current data already contains cities. The concept turns that into a "where the board is strongest" panel, making the rankings feel more human and community-based.</p>
+    <img src="references/leaderboardmaker.png" alt="Leaderboard Maker reference">
+    <p>Source: <a href="https://leaderboardmaker.com/">leaderboardmaker.com</a></p>
+
+    <h3>4. Modernize the visual system without losing density</h3>
+    <p>Use a lighter editorial sports style: off-white canvas, sharp 8px cards, strong typography, red/green semantic motion, and tabular numbers. Avoid decorative nesting and keep the interface scan-first.</p>
+
+    <h2>What's Working</h2>
+    <ul>
+      <li>The homepage already knows the right content groups: tournaments, top players, and rating changes.</li>
+      <li>Rows and cards are mostly clickable, which is good for exploration.</li>
+      <li>The existing bilingual direction is useful and should be preserved after fixing the encoding issue in checked-in HTML.</li>
+      <li>Status badges for events are valuable; they just need stronger hierarchy and cleaner placement.</li>
+    </ul>
+
+    <h2>All References</h2>
+    <ul>
+      <li><code>references/current.png</code> - current MafiaRatings local homepage capture.</li>
+      <li><code>references/modern-concept.png</code> - rendered screenshot of the new concept.</li>
+      <li><code>references/prorank.png</code> - ranking-first product reference.</li>
+      <li><code>references/trackscore.png</code> - tournament and event-tracking reference.</li>
+      <li><code>references/leaderboardmaker.png</code> - leaderboard product reference.</li>
+    </ul>
+  </main>
+</body>
+</html>

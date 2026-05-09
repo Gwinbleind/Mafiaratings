@@ -1,82 +1,46 @@
-<?php
-$events = [
-    ["title" => "Freedom Cup", "status" => "upcoming", "dates" => "May 16-17, 2026", "organizer" => "Maf is...", "href" => "tournament.html"],
-    ["title" => "MAF Marathon 2026", "status" => "upcoming", "dates" => "May 16-17, 2026", "organizer" => "LA MafClub", "href" => "tournament.html"],
-    ["title" => "Cascadia Cup 2026", "status" => "upcoming", "dates" => "August 28-30, 2026", "organizer" => "Mafia of Vancouver in Russian", "href" => "tournament.html"],
-    ["title" => "Season 2025-2026", "status" => "active", "dates" => "2025-2026", "organizer" => "American Mafia League", "href" => "tournament.html"],
-    ["title" => "April 2026", "status" => "finished", "dates" => "April 2026", "organizer" => "Maf is...", "href" => "tournament.html"],
-    ["title" => "Birthday Cup", "status" => "upcoming", "dates" => "September 26-27, 2026", "organizer" => "Maf is...", "href" => "tournament.html"],
-];
-
-$ratingChanges = [
-    ["name" => "Professor_", "from" => 66, "to" => 65, "direction" => "up", "symbol" => "▲", "href" => "player.html"],
-    ["name" => "Eluha", "from" => 3, "to" => 2, "direction" => "up", "symbol" => "▲", "href" => "player.html"],
-    ["name" => "TumASYAn", "from" => 85, "to" => 87, "direction" => "down", "symbol" => "▼", "href" => "player.html"],
-    ["name" => "sher", "from" => 1, "to" => 2, "direction" => "down", "symbol" => "▼", "href" => "player.html"],
-    ["name" => "Belarus", "from" => 12, "to" => 11, "direction" => "up", "symbol" => "▲", "href" => "player.html"],
-    ["name" => "America", "from" => 7, "to" => 8, "direction" => "down", "symbol" => "▼", "href" => "player.html"],
-];
-
-$players = [
-    ["rank" => 1, "name" => "Eluha", "city" => "Sunnyvale, CA", "points" => 2685, "href" => "player.html"],
-    ["rank" => 2, "name" => "sher", "city" => "Chicago, IL", "points" => 2640, "href" => "player.html"],
-    ["rank" => 3, "name" => "Пряник", "city" => "New York, NY", "points" => 2617, "href" => "player.html"],
-    ["rank" => 4, "name" => "Eva", "city" => "Sunnyvale, CA", "points" => 2575, "href" => "player.html"],
-    ["rank" => 5, "name" => "Шнурок", "city" => "Seattle, WA", "points" => 2525, "href" => "player.html"],
-    ["rank" => 6, "name" => "Бандера", "city" => "Miami, FL", "points" => 2504, "href" => "player.html"],
-    ["rank" => 7, "name" => "Мэр города", "city" => "Nashville, TN", "points" => 2472, "href" => "player.html"],
-    ["rank" => 8, "name" => "America", "city" => "New York, NY", "points" => 2451, "href" => "player.html"],
-    ["rank" => 9, "name" => "Sladkiy", "city" => "Miami, FL", "points" => 2449, "href" => "player.html"],
-    ["rank" => 10, "name" => "Ювелир", "city" => "Vancouver, BC", "points" => 2431, "href" => "player.html"],
-    ["rank" => 11, "name" => "Belarus", "city" => "Vienna, VA", "points" => 2348, "href" => "player.html"],
-    ["rank" => 12, "name" => "tokyo", "city" => "Miami, FL", "points" => 2316, "href" => "player.html"],
-    ["rank" => 13, "name" => "ПК", "city" => "Garland, TX", "points" => 2304, "href" => "player.html"],
-    ["rank" => 14, "name" => "ART LA", "city" => "Los Angeles, CA", "points" => 2300, "href" => "player.html"],
-    ["rank" => 15, "name" => "Sasha Sasha", "city" => "Kirkland, WA", "points" => 2300, "href" => "player.html"],
-    ["rank" => 16, "name" => "Luso", "city" => "Los Angeles, CA", "points" => 2282, "href" => "player.html"],
-    ["rank" => 17, "name" => "filister", "city" => "Indianapolis, IN", "points" => 2276, "href" => "player.html"],
-    ["rank" => 18, "name" => "Batman", "city" => "Staten Island, NY", "points" => 2269, "href" => "player.html"],
-    ["rank" => 19, "name" => "Solaris", "city" => "Montreal, QC", "points" => 2246, "href" => "player.html"],
-    ["rank" => 20, "name" => "InnaChe", "city" => "San Francisco, CA", "points" => 2215, "href" => "player.html"],
-];
-?>
 <!doctype html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MafiaRatings - Homepage Mockup</title>
+    <title>MafiaRatings - Ratings, tournaments, and stats</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="home-page">
     <header class="site-header">
         <div class="container header-inner">
-            <a href="#" class="logo">MafiaRatings</a>
+            <a href="index.html" class="logo" aria-label="MafiaRatings home">
+                <span class="logo-mark">MR</span>
+                <span>MafiaRatings</span>
+            </a>
             <div class="header-actions">
-                <button class="lang-btn is-active" data-lang="ru">RU</button>
-                <button class="lang-btn" data-lang="en">EN</button>
-                <a class="profile-link login-link" href="#"><span class="login-icon">🔑</span><span data-i18n="btn.profile">Profile</span></a>
+                <button class="lang-btn" data-lang="ru">RU</button>
+                <button class="lang-btn is-active" data-lang="en">EN</button>
+                <a class="profile-link login-link" href="#">
+                    <span class="login-icon" aria-hidden="true">#</span>
+                    <span data-i18n="btn.profile">Profile</span>
+                </a>
             </div>
-            <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">☰</button>
+            <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">Menu</button>
         </div>
     </header>
 
     <nav class="main-nav-overlay" id="mainNav" aria-hidden="true">
         <div class="main-nav-panel">
-            <button class="menu-close" id="menuClose" aria-label="Close menu">✕</button>
+            <button class="menu-close" id="menuClose" aria-label="Close menu">Close</button>
             <a href="index.html" class="menu-link root-link" data-i18n="nav.home">Home</a>
-            <a href="#" class="menu-link root-link" data-i18n="nav.ratings">Рейтинги</a>
-            <a href="#" class="menu-link root-link" data-i18n="nav.clubs">Клубы</a>
-            <a href="#" class="menu-link root-link" data-i18n="nav.leagues">Лиги</a>
-            <a href="#" class="menu-link root-link" data-i18n="nav.gameDays">Игровые дни</a>
-            <a href="tournaments.html" class="menu-link root-link" data-i18n="nav.tournaments">Турниры</a>
-            <a href="#" class="menu-link root-link" data-i18n="nav.series">Серии</a>
-            <a href="#" class="menu-link root-link" data-i18n="nav.games">Игры</a>
-            <a href="#" class="menu-link root-link" data-i18n="nav.seating">Рассадки</a>
+            <a href="#" class="menu-link root-link" data-i18n="nav.ratings">Ratings</a>
+            <a href="#" class="menu-link root-link" data-i18n="nav.clubs">Clubs</a>
+            <a href="#" class="menu-link root-link" data-i18n="nav.leagues">Leagues</a>
+            <a href="#" class="menu-link root-link" data-i18n="nav.gameDays">Game days</a>
+            <a href="tournaments.html" class="menu-link root-link" data-i18n="nav.tournaments">Tournaments</a>
+            <a href="#" class="menu-link root-link" data-i18n="nav.series">Series</a>
+            <a href="#" class="menu-link root-link" data-i18n="nav.games">Games</a>
+            <a href="#" class="menu-link root-link" data-i18n="nav.seating">Seating</a>
 
             <button class="menu-link has-children" data-submenu-toggle="reports" aria-expanded="false">
                 <span data-i18n="nav.reports">Reports</span>
-                <span class="submenu-arrow">▾</span>
+                <span class="submenu-arrow">v</span>
             </button>
             <div class="submenu" data-submenu="reports">
                 <a href="#" data-i18n="nav.reports.compChart">Competition chart</a>
@@ -88,7 +52,7 @@ $players = [
 
             <button class="menu-link has-children" data-submenu-toggle="resources" aria-expanded="false">
                 <span data-i18n="nav.resources">Resources</span>
-                <span class="submenu-arrow">▾</span>
+                <span class="submenu-arrow">v</span>
             </button>
             <div class="submenu" data-submenu="resources">
                 <a href="#" data-i18n="nav.resources.videos">Videos</a>
@@ -99,49 +63,113 @@ $players = [
     </nav>
 
     <main class="page-main">
-        <div class="container page-layout">
-            <div class="mobile-section-tabs" id="mobileSectionTabs">
-                <button class="mobile-tab is-active" data-mobile-target="events" data-i18n="mobile.tabs.events">Турниры</button>
-                <button class="mobile-tab" data-mobile-target="players" data-i18n="mobile.tabs.players">Игроки</button>
-                <button class="mobile-tab" data-mobile-target="changes" data-i18n="mobile.tabs.changes">Изменения</button>
+        <section class="home-hero">
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <h1 data-i18n="hero.title">Mafia ratings, tournaments, and stats</h1>
+                    <p data-i18n="hero.subtitle">Track competitive events, player form, and rating movement across the Mafia community in one sharp command center.</p>
+                    <div class="hero-actions">
+                        <a class="primary-action" href="#events" data-i18n="hero.ctaEvents">View events</a>
+                        <a class="secondary-action" href="#players" data-i18n="hero.ctaRating">View rating</a>
+                    </div>
+                </div>
+
+                <div class="hero-board" aria-label="MafiaRatings season snapshot">
+                    <div class="board-topline">
+                        <span>Season 2025-2026</span>
+                        <strong>Live rating pulse</strong>
+                    </div>
+                    <div class="pulse-chart" aria-hidden="true">
+                        <span style="--h: 42%"></span>
+                        <span style="--h: 58%"></span>
+                        <span style="--h: 36%"></span>
+                        <span style="--h: 74%"></span>
+                        <span style="--h: 63%"></span>
+                        <span style="--h: 86%"></span>
+                        <span style="--h: 52%"></span>
+                        <span style="--h: 68%"></span>
+                    </div>
+                    <div class="hero-stats">
+                        <div><span>Active events</span><strong>6</strong></div>
+                        <div><span>Players</span><strong>2,685</strong></div>
+                        <div><span>Updated</span><strong>Apr 29</strong></div>
+                    </div>
+                </div>
             </div>
+        </section>
+
+        <div class="container page-layout home-dashboard">
+            <div class="mobile-section-tabs" id="mobileSectionTabs">
+                <button class="mobile-tab is-active" data-mobile-target="events" data-i18n="mobile.tabs.events">Events</button>
+                <button class="mobile-tab" data-mobile-target="players" data-i18n="mobile.tabs.players">Players</button>
+                <button class="mobile-tab" data-mobile-target="changes" data-i18n="mobile.tabs.changes">Changes</button>
+            </div>
+
             <div class="left-column">
                 <section class="section mobile-section is-active" id="events" data-mobile-section="events">
                     <div class="section-head">
-                        <h2 data-i18n="events.title">Турниры</h2>
-                        <a href="tournaments.html" class="section-action-btn" data-i18n="events.fullList">Подробный список</a>
+                        <div>
+                            <h2 data-i18n="events.title">Tournaments</h2>
+                            <p class="section-meta">Upcoming cups, active seasons, and recent finals.</p>
+                        </div>
+                        <a href="tournaments.html" class="section-action-btn" data-i18n="events.fullList">Detailed list</a>
                     </div>
                     <div class="event-grid">
-                        <?php foreach ($events as $event): ?>
-                            <a href="<?= htmlspecialchars($event["href"]); ?>" class="event-card event-card-link">
-                                <div class="event-title-row">
-                                    <span class="mock-icon tournament-icon">🏆</span>
-                                    <h3><?= htmlspecialchars($event["title"]); ?></h3>
-                                </div>
-                                <span class="badge badge-<?= htmlspecialchars($event["status"]); ?>" data-status="<?= htmlspecialchars($event["status"]); ?>">
-                                    <?= htmlspecialchars($event["status"]); ?>
-                                </span>
-                                <p><?= htmlspecialchars($event["dates"]); ?></p>
-                                <small><?= htmlspecialchars($event["organizer"]); ?></small>
-                            </a>
-                        <?php endforeach; ?>
+                        <a href="tournament.html" class="event-card event-card-link event-card-featured">
+                            <div class="event-title-row"><span class="mock-icon tournament-icon">01</span><h3>Freedom Cup</h3></div>
+                            <span class="badge badge-upcoming" data-status="upcoming">upcoming</span>
+                            <p>May 16-17, 2026</p>
+                            <small>Maf is...</small>
+                        </a>
+                        <a href="tournament.html" class="event-card event-card-link">
+                            <div class="event-title-row"><span class="mock-icon tournament-icon">02</span><h3>MAF Marathon 2026</h3></div>
+                            <span class="badge badge-upcoming" data-status="upcoming">upcoming</span>
+                            <p>May 16-17, 2026</p>
+                            <small>LA MafClub</small>
+                        </a>
+                        <a href="tournament.html" class="event-card event-card-link">
+                            <div class="event-title-row"><span class="mock-icon tournament-icon">03</span><h3>Cascadia Cup 2026</h3></div>
+                            <span class="badge badge-upcoming" data-status="upcoming">upcoming</span>
+                            <p>August 28-30, 2026</p>
+                            <small>Mafia of Vancouver in Russian</small>
+                        </a>
+                        <a href="tournament.html" class="event-card event-card-link">
+                            <div class="event-title-row"><span class="mock-icon tournament-icon">04</span><h3>Season 2025-2026</h3></div>
+                            <span class="badge badge-active" data-status="active">active</span>
+                            <p>2025-2026</p>
+                            <small>American Mafia League</small>
+                        </a>
+                        <a href="tournament.html" class="event-card event-card-link">
+                            <div class="event-title-row"><span class="mock-icon tournament-icon">05</span><h3>April 2026</h3></div>
+                            <span class="badge badge-finished" data-status="finished">finished</span>
+                            <p>April 2026</p>
+                            <small>Maf is...</small>
+                        </a>
+                        <a href="tournament.html" class="event-card event-card-link">
+                            <div class="event-title-row"><span class="mock-icon tournament-icon">06</span><h3>Birthday Cup</h3></div>
+                            <span class="badge badge-upcoming" data-status="upcoming">upcoming</span>
+                            <p>September 26-27, 2026</p>
+                            <small>Maf is...</small>
+                        </a>
                     </div>
                 </section>
 
-                <section class="section mobile-section" id="changes" data-mobile-section="changes">
+                <section class="section mobile-section movement-section" id="changes" data-mobile-section="changes">
                     <div class="section-head">
-                        <h2 data-i18n="changes.title">Изменения рейтинга</h2>
-                        <a class="text-link" href="#" data-i18n="changes.report">Подробный отчет</a>
+                        <div>
+                            <h2 data-i18n="changes.title">Latest rating changes</h2>
+                            <p class="section-meta" data-i18n="changes.since">Since last update: Apr 29, 2026</p>
+                        </div>
+                        <a class="text-link" href="#" data-i18n="changes.report">Detailed report</a>
                     </div>
-                    <p class="section-meta" data-i18n="changes.since">С последнего обновления: 29 Apr 2026</p>
                     <div class="change-col">
-                        <h3 data-i18n="changes.list">Все изменения</h3>
-                        <?php foreach ($ratingChanges as $row): ?>
-                            <div class="change-row <?= htmlspecialchars($row["direction"]); ?>">
-                                <span><span class="mock-icon player-icon">👤</span><a class="player-link" href="<?= htmlspecialchars($row["href"]); ?>"><?= htmlspecialchars($row["name"]); ?></a></span>
-                                <span>#<?= (int) $row["from"]; ?> -> #<?= (int) $row["to"]; ?> <?= htmlspecialchars($row["symbol"]); ?></span>
-                            </div>
-                        <?php endforeach; ?>
+                        <h3 data-i18n="changes.list">All changes</h3>
+                        <div class="change-row up"><span><span class="mock-icon player-icon">P</span><a class="player-link" href="player.html">Professor_</a></span><span>#66 -> #65 UP</span></div>
+                        <div class="change-row up"><span><span class="mock-icon player-icon">E</span><a class="player-link" href="player.html">Eluha</a></span><span>#3 -> #2 UP</span></div>
+                        <div class="change-row down"><span><span class="mock-icon player-icon">T</span><a class="player-link" href="player.html">TumASYAn</a></span><span>#85 -> #87 DOWN</span></div>
+                        <div class="change-row down"><span><span class="mock-icon player-icon">S</span><a class="player-link" href="player.html">sher</a></span><span>#1 -> #2 DOWN</span></div>
+                        <div class="change-row up"><span><span class="mock-icon player-icon">B</span><a class="player-link" href="player.html">Belarus</a></span><span>#12 -> #11 UP</span></div>
+                        <div class="change-row down"><span><span class="mock-icon player-icon">A</span><a class="player-link" href="player.html">America</a></span><span>#7 -> #8 DOWN</span></div>
                     </div>
                 </section>
             </div>
@@ -149,7 +177,10 @@ $players = [
             <aside class="right-column">
                 <section class="section mobile-section" id="players" data-mobile-section="players">
                     <div class="section-head">
-                        <h2 data-i18n="players.title">Топ игроков</h2>
+                        <div>
+                            <h2 data-i18n="players.title">Best players</h2>
+                            <p class="section-meta">Current table leaders.</p>
+                        </div>
                         <div class="event-filters">
                             <button class="chip is-active">Top 10</button>
                             <button class="chip">Top 25</button>
@@ -160,20 +191,22 @@ $players = [
                             <thead>
                                 <tr>
                                     <th>#</th>
-                                    <th data-i18n="players.player">Игрок</th>
-                                    <th data-i18n="players.city">Город</th>
-                                    <th data-i18n="players.points">Очки</th>
+                                    <th data-i18n="players.player">Player</th>
+                                    <th data-i18n="players.city">City</th>
+                                    <th data-i18n="players.points">Points</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php foreach ($players as $player): ?>
-                                    <tr>
-                                        <td><?= (int) $player["rank"]; ?></td>
-                                        <td><span class="mock-icon player-icon">👤</span><a class="player-link" href="<?= htmlspecialchars($player["href"]); ?>"><?= htmlspecialchars($player["name"]); ?></a></td>
-                                        <td><?= htmlspecialchars($player["city"]); ?></td>
-                                        <td><?= number_format((int) $player["points"]); ?></td>
-                                    </tr>
-                                <?php endforeach; ?>
+                                <tr><td>1</td><td><span class="mock-icon player-icon">E</span><a class="player-link" href="player.html">Eluha</a></td><td>Sunnyvale, CA</td><td>2,685</td></tr>
+                                <tr><td>2</td><td><span class="mock-icon player-icon">S</span><a class="player-link" href="player.html">sher</a></td><td>Chicago, IL</td><td>2,640</td></tr>
+                                <tr><td>3</td><td><span class="mock-icon player-icon">P</span><a class="player-link" href="player.html">Pryanik</a></td><td>New York, NY</td><td>2,617</td></tr>
+                                <tr><td>4</td><td><span class="mock-icon player-icon">E</span><a class="player-link" href="player.html">Eva</a></td><td>Sunnyvale, CA</td><td>2,575</td></tr>
+                                <tr><td>5</td><td><span class="mock-icon player-icon">S</span><a class="player-link" href="player.html">Shnurok</a></td><td>Seattle, WA</td><td>2,525</td></tr>
+                                <tr><td>6</td><td><span class="mock-icon player-icon">B</span><a class="player-link" href="player.html">Bandera</a></td><td>Miami, FL</td><td>2,504</td></tr>
+                                <tr><td>7</td><td><span class="mock-icon player-icon">M</span><a class="player-link" href="player.html">Mer Goroda</a></td><td>Nashville, TN</td><td>2,472</td></tr>
+                                <tr><td>8</td><td><span class="mock-icon player-icon">A</span><a class="player-link" href="player.html">America</a></td><td>New York, NY</td><td>2,451</td></tr>
+                                <tr><td>9</td><td><span class="mock-icon player-icon">S</span><a class="player-link" href="player.html">Sladkiy</a></td><td>Miami, FL</td><td>2,449</td></tr>
+                                <tr><td>10</td><td><span class="mock-icon player-icon">Y</span><a class="player-link" href="player.html">Yuvelir</a></td><td>Vancouver, BC</td><td>2,431</td></tr>
                             </tbody>
                         </table>
                     </div>
@@ -186,7 +219,7 @@ $players = [
         <div class="container footer-inner">
             <p>© MafiaRatings</p>
             <nav>
-                <a href="#">Home</a>
+                <a href="index.html">Home</a>
                 <a href="#">Reports</a>
                 <a href="#">Resources</a>
             </nav>

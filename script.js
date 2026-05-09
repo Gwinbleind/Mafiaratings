@@ -275,6 +275,46 @@ const dictionary = {
   }
 };
 
+Object.assign(dictionary.ru, {
+  "nav.home": "Главная",
+  "nav.ratings": "Рейтинги",
+  "nav.clubs": "Клубы",
+  "nav.leagues": "Лиги",
+  "nav.gameDays": "Игровые дни",
+  "nav.tournaments": "Турниры",
+  "nav.series": "Серии",
+  "nav.games": "Игры",
+  "nav.seating": "Рассадки",
+  "nav.reports": "Отчеты",
+  "nav.resources": "Ресурсы",
+  "nav.reports.compChart": "График соревнований",
+  "nav.reports.referees": "Судьи",
+  "nav.reports.nomWinners": "Победители номинаций",
+  "nav.reports.byNumbers": "Цифры",
+  "nav.reports.generalStats": "Общая статистика",
+  "nav.resources.videos": "Видео",
+  "nav.resources.photos": "Фото",
+  "nav.resources.rulebook": "Правила",
+  "btn.profile": "Профиль",
+  "hero.title": "Рейтинги, турниры и статистика мафии",
+  "hero.subtitle": "Следите за событиями, формой игроков и движением рейтинга в одном удобном центре.",
+  "hero.ctaEvents": "Смотреть турниры",
+  "hero.ctaRating": "Смотреть рейтинг",
+  "events.title": "Турниры",
+  "events.fullList": "Подробный список",
+  "changes.title": "Изменения рейтинга",
+  "changes.report": "Подробный отчет",
+  "changes.since": "С последнего обновления: 29 Apr 2026",
+  "changes.list": "Все изменения",
+  "players.title": "Топ игроков",
+  "players.player": "Игрок",
+  "players.city": "Город",
+  "players.points": "Очки",
+  "mobile.tabs.events": "Турниры",
+  "mobile.tabs.players": "Игроки",
+  "mobile.tabs.changes": "Изменения"
+});
+
 function applyLanguage(lang) {
   document.documentElement.lang = lang;
   const words = dictionary[lang];

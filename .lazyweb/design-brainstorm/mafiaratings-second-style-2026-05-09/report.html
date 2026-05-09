@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MafiaRatings Second Style Brainstorm</title>
+  <style>
+    body { margin: 0; background: #f7f9fc; color: #121826; font-family: Inter, "Segoe UI", Arial, sans-serif; line-height: 1.6; }
+    main { max-width: 900px; margin: 0 auto; padding: 48px 24px; }
+    h1 { font-size: 2.6rem; line-height: 1.05; }
+    h2 { margin-top: 38px; font-size: 1.6rem; }
+    table { width: 100%; border-collapse: collapse; background: #fff; border: 1px solid #dde5ef; border-radius: 12px; overflow: hidden; }
+    th, td { padding: 12px 14px; border-bottom: 1px solid #dde5ef; text-align: left; }
+    th { background: #eef4ff; }
+    .callout { padding: 18px 20px; background: #eef4ff; border: 1px solid #cddcf8; border-radius: 14px; }
+    code { background: #eef4ff; padding: 2px 6px; border-radius: 6px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Design Brainstorm: MafiaRatings Second Style</h1>
+    <section class="callout">
+      <strong>TL;DR</strong>
+      <p>Make the second concept feel like a modern tournament media desk: light, editorial, photo-led, and focused on where to play next and who is currently strongest.</p>
+    </section>
+
+    <h2>Which Ideas to Prototype</h2>
+    <table>
+      <thead><tr><th>Idea</th><th>Novelty</th><th>Feasibility</th><th>Verdict</th></tr></thead>
+      <tbody>
+        <tr><td>Tournament photo carousel as primary discovery</td><td>Medium</td><td>High</td><td>Prototype</td></tr>
+        <tr><td>Player leaderboard with portrait-based rank rows</td><td>Medium</td><td>High</td><td>Prototype</td></tr>
+        <tr><td>Club venue carousel for organizer identity</td><td>High</td><td>Medium</td><td>Prototype</td></tr>
+        <tr><td>Short player story cards tied to rating movement</td><td>Medium</td><td>High</td><td>Prototype</td></tr>
+      </tbody>
+    </table>
+
+    <h2>The Obvious Approach</h2>
+    <p>Most ratings sites lean on dense tables, muted admin UI, and small status badges. That works for repeat users, but it makes tournaments and clubs feel abstract.</p>
+
+    <h2>Cross-Pollination Ideas</h2>
+    <h3>From Sports Media: Event Cards</h3>
+    <p><strong>The Pattern:</strong> Put upcoming events in large media cards with date, venue, and club identity immediately visible.</p>
+    <p><strong>Applied Here:</strong> Upcoming tournaments become a horizontal rail with real event imagery, club names, and dates.</p>
+
+    <h3>From Creator Platforms: Player Stories</h3>
+    <p><strong>The Pattern:</strong> Highlight people with portraits, short context, and a clear reason they are interesting now.</p>
+    <p><strong>Applied Here:</strong> Top players and rising players get small editorial cards tied to rating movement.</p>
+
+    <h3>From Travel Discovery: Club Spotlight</h3>
+    <p><strong>The Pattern:</strong> Treat places as destinations, using venue photos and organizer identity.</p>
+    <p><strong>Applied Here:</strong> Clubs become a discovery carousel with city, venue mood, and upcoming tournament hooks.</p>
+
+    <h2>Implementation Notes</h2>
+    <p>The prototype is implemented at <code>second/index.html</code> with a light palette, photo carousels, leader cards, club cards, and responsive behavior.</p>
+    <p>Lazyweb MCP screenshot tools were not available in this session, so this report records the applied direction rather than downloaded Lazyweb references.</p>
+  </main>
+</body>
+</html>
